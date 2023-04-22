@@ -1,4 +1,4 @@
-#Introduction and Rules 
+# Introduction and Rules 
 def intro():
     print("Welcome to Escape from ISS Ravana")
     print("Escape from ISS Ravana is a text based survival game.")
@@ -26,5 +26,9 @@ areas = {
     'Medical': {'Left': 'Bay1', 'Down': 'Mid Deck', 'Item': 'Bandages'},
     'Recreation': {'Left': 'Mid Deck', 'Right': 'Bridge', 'Up': 'Officers', 'Down': 'Crew Deck', 'Item': 'Grenade'},
     'Officer': {'Down': 'Recreation', 'Item': 'Gun'},
-    'Crew': {'Up':'Recreation', 'Item': 'Armour'}
+    'Crew': {'Up': 'Recreation', 'Item': 'Armour'}
     }
+
+
+intro()
+clear()
