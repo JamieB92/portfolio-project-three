@@ -1,3 +1,6 @@
+import os
+
+
 # Introduction and Rules 
 def intro():
     print("Welcome to Escape from ISS Ravana")
@@ -8,10 +11,9 @@ def intro():
     input("Press any key to continue ")
 
 
-# Clears Screen
 def clear():
-    print("Beginning Game....")
-    clear()
+
+    os.system('cls')
 
 
 # Play Area
