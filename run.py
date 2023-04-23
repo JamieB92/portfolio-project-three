@@ -32,5 +32,14 @@ areas = {
     }
 
 
+vowls = ['a', 'e', 'i', 'o', 'u']
+
+backpack = []
+
+current_deck = "Mid Deck"
+
+msg = ""
+
+
 intro()
 clear()
