@@ -29,7 +29,7 @@ areas = {
     'Recreation': {'Left': 'Mid Deck', 'Right': 'Bridge', 'Up': 'Officers', 'Down': 'Crew Deck', 'Item': 'Grenade'},
     'Officer': {'Down': 'Recreation', 'Item': 'Gun'},
     'Crew': {'Up': 'Recreation', 'Item': 'Armour'},
-    'Escape Pod': {'Down': 'Bay 1', 'Escape':'Use Pod'}
+    'Escape Pod': {'Down': 'Bay 1', 'Escape': 'Use Pod'}
     }
 
 
@@ -43,13 +43,13 @@ msg = ""
 intro()
 clear()
 
+name = input("Whats is your name ")
 
 while True:
         
-    clear()
     # Hud 
-    print(f"You are in the {current_deck}:\nBackpack : {backpack}\n{'-'* 27}")
-
+    print(f"{name} you are in the {current_deck} \nBackpack : {backpack}\n{'-'* 27}")
+    
     print(msg)
     # Find Item
     if "Item" in areas[current_deck].keys():
@@ -89,3 +89,6 @@ while True:
             print(f"Computer: Well Done {name}, You did it!")
             print("Computer: Please find the access code for the escape pod")
             print("that are hidden in this room!")
+
+    
+    
