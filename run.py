@@ -60,12 +60,32 @@ while True:
 
             print(f"You see a {close_item}")
         
-        # Esacpe The ship Function
-        if "Escape" in areas[current_deck].keys():
+    # Esacpe The ship Function
+    if "Escape" in areas[current_deck].keys():
 
-            if len(backpack) < 7:
-                print(f"{name} You need to find the code to activate!")
+        if len(backpack) < 7:
+            print(f"{name} You need to find the code to activate!")
 
-            else:
-                print(f"Well Done {name}, You escaped with your life!")
-                break
+        else:
+            print(f"Well Done {name}, You escaped with your life!")
+            break
+    
+    # Intruder interaction
+    if "Intruder" in areas[current_deck].keys():
+
+        if len(backpack) < 6:
+            print("As you enter the room you hear some noises")
+            print("A giant creatue jumps out at you!!!")
+            print("The giant Xenos rips you limb")
+            print("GAME OVER !!!")
+            break
+
+        else:
+            print("As you enter the room you hear some noises")
+            print("A giant creatue jumps out at you!!!")
+            print("You pull out the gun you found")
+            print("You enter into battle with the creatue")
+            print("You defeat the Xenos")
+            print(f"Computer: Well Done {name}, You did it!")
+            print("Computer: Please find the access code for the escape pod")
+            print("that are hidden in this room!")
