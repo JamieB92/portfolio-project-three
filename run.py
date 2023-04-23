@@ -47,11 +47,11 @@ clear()
 while True:
         
     clear()
-
+    # Hud 
     print(f"You are in the {current_deck}:\nBackpack : {backpack}\n{'-'* 27}")
 
     print(msg)
-
+    # Find Item
     if "Item" in areas[current_deck].keys():
 
         close_item = areas[current_deck]["Item"]
@@ -59,3 +59,13 @@ while True:
         if close_item not in backpack:
 
             print(f"You see a {close_item}")
+        
+        # Esacpe The ship Function
+        if "Escape" in areas[current_deck].keys():
+
+            if len(backpack) < 7:
+                print(f"{name} You need to find the code to activate!")
+
+            else:
+                print(f"Well Done {name}, You escaped with your life!")
+                break
