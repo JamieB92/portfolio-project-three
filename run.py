@@ -90,5 +90,22 @@ while True:
             print("Computer: Please find the access code for the escape pod")
             print("that are hidden in this room!")
 
-    
-    
+    player_movement = input("Enter Direction")
+
+    new_movement = player_movement.split(' ')
+
+    action = new_movement[1].title()
+
+    if len(new_movement) > 1:
+        item = new_movement[1]
+        direction = new_movement[1].title()
+
+    if action[0] == 'Go ':
+        current_deck = areas[current_deck][direction]
+        print(f"you've gone {direction}")
+    else:
+        print("You walked into a wall")
+
+    if action == "Get":
+
+       
