@@ -37,7 +37,7 @@ backpack = []
 
 current_deck = "Mid Deck"
 
-msg = ""
+computer = " "
 
 
 intro()
@@ -50,7 +50,7 @@ while True:
     # Hud 
     print(f"{name} you are in the {current_deck} \nBackpack : {backpack}\n{'-'* 27}")
     
-    print(msg)
+    print(computer)
     # Find Item
     if "Item" in areas[current_deck].keys():
 
@@ -90,22 +90,39 @@ while True:
             print("Computer: Please find the access code for the escape pod")
             print("that are hidden in this room!")
 
-    player_movement = input("Enter Direction")
+    player_movement = input("Enter Direction ")
 
     new_movement = player_movement.split(' ')
 
-    action = new_movement[1].title()
+    action = new_movement[0].title()
 
     if len(new_movement) > 1:
-        item = new_movement[1]
+        item = new_movement[1:]
         direction = new_movement[1].title()
 
-    if action[0] == 'Go ':
-        current_deck = areas[current_deck][direction]
-        print(f"you've gone {direction}")
-    else:
-        print("You walked into a wall")
+        item = ' '.join(item).title()
 
+# Movement
+    if action == 'Go':
+        try:
+            current_deck = areas[current_deck][direction]
+            computer = f"you've gone {direction}"
+
+        except ValueError:
+            computer = "You cant go that way"
+ # Collect Items    
     if action == "Get":
 
-       
+        try:
+            if item == areas[current_deck]["Item"]:
+
+                if item not in backpack:
+
+                    backpack.append(areas[current_deck]["Item"])
+                    computer = f"you picked up the {item}"
+                else:
+                    computer = f"You already have {item}"
+            else:
+                computer = "The deck was empty"
+        except ValueError:
+            computer = "The deck was empty"
