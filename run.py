@@ -19,15 +19,15 @@ def clear():
 # Play Area
 areas = {
     'Mid': {'Left': 'Lower', 'Right': 'Recreation'},
-    'Lower': {'Left': 'Engine', 'Right': 'Mid', 'Up': '1', 'Down': '2'},
+    'Lower': {'Left': 'Engine', 'Right': 'Mid', 'Up': 'landing', 'Down': '2'},
     'Engine': {'Right': 'Lower', 'Item': 'Magazine'},
     'Bridge': {'Left': 'Recreation', 'Intruder': 'Xenos', 'Item': 'Pin'},
-    '1': {'Right': 'Medical', 'Up': 'Escape Pod', 'Down': 'Lower'},
+    'landing': {'Right': 'Med', 'Up': 'Escape Pod', 'Down': 'Lower'},
     '2': {'Right': 'Armory', 'Up': 'Lower', 'Item': 'Torch'},
     'Armory': {'Left': '2', 'Up': 'Mid', 'Item': 'Bullets'},
-    'Medical': {'Left': '1', 'Down': 'Mid', 'Item': 'Bandages'},
-    'Recreation': {'Left': 'Mid', 'Right': 'Bridge', 'Up': 'Officers', 'Down': 'Crew', 'Item': 'Grenade'},
-    'Officer': {'Down': 'Recreation', 'Item': 'Gun'},
+    'Med': {'Left': '1', 'Down': 'Mid', 'right': 'office', 'Item': 'Bandages'},
+    'Recreation': {'Left': 'Mid', 'Right': 'Bridge', 'Item': 'Grenade'},
+    'Officer': {'Left': 'Med', 'Item': 'Gun'},
     'Crew': {'Up': 'Recreation', 'Item': 'Armour'},
     'Escape Pod': {'Down': '1', 'Escape': 'Use Pod'}
     }
@@ -48,7 +48,7 @@ name = input("Whats is your name ")
 while True:
         
     # Hud 
-    print(f"{name} you are in the {current_deck} deck. \nBackpack : {backpack}\n")
+    print(f"{name} you are in the {current_deck} deck. \nBackpack: {backpack}")
     
     print(computer)
     # Find Item
@@ -96,9 +96,6 @@ while True:
 
     action = new_movement[0].title()
 
-    item = "Item"
-    direction = "null"
-
     if len(new_movement) > 1:
         item = new_movement[1:]
         direction = new_movement[1].title()
@@ -145,10 +142,14 @@ while True:
         print("'Get' and the items name'Banna'")
     
     elif action == "Exit":
+        clear()
         print(f"{name} You exit the Game")
         break
 
     elif action == "Restart":
         print(f"{name} You have restarted the game")
-        intro()
         clear()
+        backpack.clear()
+        current_deck = "Mid"
+        computer = ' '
+        intro()
