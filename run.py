@@ -18,24 +18,24 @@ def clear():
 
 # Play Area
 areas = {
-    'Mid Deck': {'deck': 'Mid Deck', 'Left': 'Lower Deck', 'Right': 'Recreation', 'Up': 'Medical Deck', 'Down': 'Armory'},
-    'Lower Deck': {'deck': 'Lower Deck', 'Left': 'Engineering', 'Right': 'Mid Deck', 'Up': 'Bay 1', 'Down': 'Bay 2'},
-    'Engineering': {'deck': 'Engineering', 'Right': 'Lower Deck', 'Item': 'Magazine'},
-    'Bridge': {'deck': 'Bridge', 'Left': 'Recreation Deck', 'Intruder': 'Xenos', 'Item': 'Pin'},
-    'Bay 1': {'deck': 'Bay 1', 'Right': 'Medical', 'Up': 'Escape Pod', 'Down': 'Lower Deck'},
-    'Bay 2': {'deck': 'Bay 2', 'Right': 'Weapon Deck', 'Up': 'Lower Deck', 'Item': 'Torch'},
-    'Armory': {'deck': 'Armory', 'Left': 'Bay 2', 'Up': 'Mid Deck', 'Item': 'Bullets'},
-    'Medical': {'deck': 'Medical', 'Left': 'Bay1', 'Down': 'Mid Deck', 'Item': 'Bandages'},
-    'Recreation': {'deck': 'Recreation', 'Left': 'Mid Deck', 'Right': 'Bridge', 'Up': 'Officers', 'Down': 'Crew Deck', 'Item': 'Grenade'},
-    'Officer': {'deck': 'Officer', 'Down': 'Recreation', 'Item': 'Gun'},
-    'Crew': {'deck': 'Crew', 'Up': 'Recreation', 'Item': 'Armour'},
-    'Escape Pod': {'deck': 'Escape Pod', 'Down': 'Bay 1', 'Escape': 'Use Pod'}
+    'Mid Deck': {'Left': 'Lower Deck', 'Right': 'Recreation', 'Up': 'Medical Deck', 'Down': 'Armory'},
+    'Lower Deck': {'Left': 'Engineering', 'Right': 'Mid Deck', 'Up': 'Bay 1', 'Down': 'Bay 2'},
+    'Engineering': {'Right': 'Lower Deck', 'Item': 'Magazine'},
+    'Bridge': {'Left': 'Recreation Deck', 'Intruder': 'Xenos', 'Item': 'Pin'},
+    'Bay 1': {'Right': 'Medical', 'Up': 'Escape Pod', 'Down': 'Lower Deck'},
+    'Bay 2': {'Right': 'Weapon Deck', 'Up': 'Lower Deck', 'Item': 'Torch'},
+    'Armory': {'Left': 'Bay 2', 'Up': 'Mid Deck', 'Item': 'Bullets'},
+    'Medical': {'Left': 'Bay1', 'Down': 'Mid Deck', 'Item': 'Bandages'},
+    'Recreation': {'Left': 'Mid Deck', 'Right': 'Bridge', 'Up': 'Officers', 'Down': 'Crew Deck', 'Item': 'Grenade'},
+    'Officer': {'Down': 'Recreation', 'Item': 'Gun'},
+    'Crew': {'Up': 'Recreation', 'Item': 'Armour'},
+    'Escape Pod': {'Down': 'Bay 1', 'Escape': 'Use Pod'}
     }
-directions = ['Up', 'Down', 'Left', 'Right']
+
 
 backpack = []
 
-current_deck = areas["Mid Deck"]
+current_deck = "Mid Deck"
 
 computer = " "
 
@@ -46,15 +46,13 @@ clear()
 name = input("Whats is your name ")
 
 while True:
+        
     # Hud 
-    print(f"{name} you are in the {current_deck}")
-    print(f"Backpack : {backpack}")
+    print(f"{name} you are in the {current_deck} \nBackpack : {backpack}\n{'-'* 27}")
     
     print(computer)
     # Find Item
-    print(computer)
-    # Find Item
-    if "Item" in areas[current_deck]:
+    if "Item" in areas[current_deck].keys():
 
         close_item = areas[current_deck]["Item"]
 
@@ -63,7 +61,7 @@ while True:
             print(f"You see a {close_item}")
         
     # Esacpe The ship Function
-    if "Escape" in areas[current_deck]:
+    if "Escape" in areas[current_deck].keys():
 
         if len(backpack) < 7:
             print(f"{name} You need to find the code to activate!")
@@ -91,7 +89,6 @@ while True:
             print(f"Computer: Well Done {name}, You did it!")
             print("Computer: Please find the access code for the escape pod")
             print("that are hidden in this room!")
- # Collect Items    
 
     player_movement = input("Enter Direction ")
 
@@ -105,6 +102,15 @@ while True:
 
         item = ' '.join(item).title()
 
+# Movement
+    if action == 'Go':
+        try:
+            current_deck = areas[current_deck][direction]
+            computer = f"you've gone {direction}"
+
+        except ValueError:
+            computer = "You cant go that way"
+ # Collect Items    
     if action == "Get":
 
         try:
