@@ -90,7 +90,7 @@ while True:
             print("Computer: Please find the access code for the escape pod")
             print("that are hidden in this room!")
 
-    player_movement = input("What is your next move? ")
+    player_movement = input("What is your next move? ").title()
 
     new_movement = player_movement.split(' ')
 
@@ -134,3 +134,11 @@ while True:
         print("To pick up item enter:")
         print("'Get' and the items name'Banna'")
 
+    elif action == "Exit":
+        print(f"{name} You exit the Game")
+        break
+
+    elif action == "Restart":
+        print(f"{name} You have restarted the game")
+        intro()
+        clear()
