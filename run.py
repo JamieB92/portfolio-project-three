@@ -13,7 +13,7 @@ def intro():
 
 def clear():
 
-    os.system('cls')
+    os.system("cls" if os.name == "nt" else "clear")
 
 
 # Play Area
@@ -107,9 +107,11 @@ while True:
         try:
             current_deck = areas[current_deck][direction]
             computer = f"you've gone {direction}"
+            clear()
 
         except ValueError:
             computer = "You cant go that way"
+            clear()
 # Collect Items    
     if action == "Get":
 
@@ -120,12 +122,16 @@ while True:
 
                     backpack.append(areas[current_deck]["Item"])
                     computer = f"you picked up the {item}"
+                    clear()
                 else:
                     computer = f"You already have {item}"
+                    clear()
             else:
                 computer = "The deck was empty"
+                clear()
         except ValueError:
             computer = "The deck was empty"
+            clear()
 
     elif action == "Help":
         print("Game Instructions!")
@@ -133,6 +139,7 @@ while True:
         print("'Go' and enter the direction 'Left, Right, Up, Down")
         print("To pick up item enter:")
         print("'Get' and the items name'Banna'")
+        clear()
 
     elif action == "Exit":
         print(f"{name} You exit the Game")
