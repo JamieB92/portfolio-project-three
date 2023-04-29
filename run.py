@@ -1,19 +1,60 @@
 import os
 
 
-# Introduction and Rules
-def intro():
-    print("Welcome to Escape from ISS Ravana")
-    print("Escape from ISS Ravana is a text based survival game.")
-    print("You will have to collect all the items within the ship to take on.")
-    print("Defeat the intruder and escape with your life!")
-    
-    input("Press any key to continue ")
-
-
 def clear():
 
     os.system("cls" if os.name == "nt" else "clear")
+
+
+# Introduction and Rules
+def home():
+    print("###############################################################")
+    print("#                                                             #")
+    print("#            Welcome to Escape from the ISS Ravana            #")
+    print("#-------------------------------------------------------------#")
+    print("#                                                             #")
+    print("#     Escape from ISS Ravana is a text based survival game    #")
+    print("#     Where the aim of the game is to escape from the ship    #")
+    print("#     But keep your witts about you as you explore the ship   #")
+    print("#            As you may not be the only one left!             #")
+    print("#                                                             #")
+    print("###############################################################")
+    print("#                                                             #")
+    print("#                      Instructions                           #")
+    print("#-------------------------------------------------------------#")
+    print("#                                                             #")
+    print("#                     Type Commands :                         #")
+    print("#       To Move between rooms type go and the direction:      #")
+    print("#                 'Go' - 'Left', 'Right', 'Up', 'Down'        #")
+    print("#       To Move between rooms type go and the direction       #")
+    print("#             Type 'Restart' to Restart the game              #")
+    print("#             Type 'Exit' to exit the game                    #")
+    print("#                                                             #")
+    print("###############################################################")
+    input("#                  Press any key to continue                  #")
+    clear()
+
+
+def intro():
+    print("###############################################################")
+    print("#                                                             #")
+    print("#                Escape from the ISS Ravana                   #")
+    print("#-------------------------------------------------------------#")
+    print("#                                                             #")
+    print("#     Explosions and and the smell of and electrical fire     #")
+    print("#     engulfs your senses, you struggle to open your eyes     #")
+    print("#     after such a long sleep.                                #")
+    print("#     Your cryo chamber door opens and you fall to the floor. #")
+    print("#     As you get to your feet you see your friend Codys       #")
+    print("#     body hanging out of their cryo chamber.                 #")
+    print("#     You rush to cody to see if he is alive but he's dead!   #")
+    print("#     You here a strange noise you have never heard before.   #")
+    print("#     Your rush towards the sound but you trip and fall.      #")
+    print("#     You get to you feet and tell yourself                   #")
+    print("#     'I need to get of this ship....'                        #")
+    print("#                                                             #")
+    print("###############################################################")
+    input("#                  Press any key to continue                  #")
 
 
 # Play Area
@@ -39,15 +80,17 @@ current_deck = "Mid"
 
 computer = " "
 
-
+home()
 intro()
 clear()
-
-name = input("Whats is your name ")
+print("AI initating ...")
+print("Hi Im Titan your ships AI,")
+print("Welcome Aboard the ISS Ravana ")
+name = input("Please confirm your name?\n")
 
 while True:
-        
-    # Hud 
+    clear()
+    # Hud
     print(f"{name} you are in the {current_deck} deck. \nBackpack: {backpack}")
     
     print(computer)
