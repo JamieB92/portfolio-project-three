@@ -18,12 +18,12 @@ def clear():
 
 # Play Area
 areas = {
-    'Mid Deck': {'Left': 'Lower Deck', 'Right': 'Recreation', 'Up': 'Medical Deck', 'Down': 'Armory'},
-    'Lower Deck': {'Left': 'Engineering', 'Right': 'Mid Deck', 'Up': 'Bay 1', 'Down': 'Bay 2'},
-    'Engineering': {'Right': 'Lower Deck', 'Item': 'Magazine'},
+    'Mid Deck': {'Left': 'Lower Deck', 'Right': 'Recreation'},
+    'Lower Deck': {'Left': 'Engine', 'Right': 'Mid', 'Up': '1', 'Down': '2'},
+    'Engine': {'Right': 'Lower Deck', 'Item': 'Magazine'},
     'Bridge': {'Left': 'Recreation Deck', 'Intruder': 'Xenos', 'Item': 'Pin'},
-    'Bay 1': {'Right': 'Medical', 'Up': 'Escape Pod', 'Down': 'Lower Deck'},
-    'Bay 2': {'Right': 'Weapon Deck', 'Up': 'Lower Deck', 'Item': 'Torch'},
+    '1': {'Right': 'Medical', 'Up': 'Escape Pod', 'Down': 'Lower Deck'},
+    '2': {'Right': 'Weapon Deck', 'Up': 'Lower Deck', 'Item': 'Torch'},
     'Armory': {'Left': 'Bay 2', 'Up': 'Mid Deck', 'Item': 'Bullets'},
     'Medical': {'Left': 'Bay1', 'Down': 'Mid Deck', 'Item': 'Bandages'},
     'Recreation': {'Left': 'Mid Deck', 'Right': 'Bridge', 'Up': 'Officers', 'Down': 'Crew Deck', 'Item': 'Grenade'},
@@ -96,6 +96,9 @@ while True:
 
     action = new_movement[0].title()
 
+    item = "Item"
+    direction = "null"
+
     if len(new_movement) > 1:
         item = new_movement[1:]
         direction = new_movement[1].title()
@@ -104,12 +107,13 @@ while True:
 
 # Movement
     if action == 'Go':
+
         try:
             current_deck = areas[current_deck][direction]
             computer = f"you've gone {direction}"
             clear()
 
-        except ValueError:
+        except Exception:
             computer = "You cant go that way"
             clear()
 # Collect Items    
@@ -129,7 +133,7 @@ while True:
             else:
                 computer = "The deck was empty"
                 clear()
-        except ValueError:
+        except Exception:
             computer = "The deck was empty"
             clear()
 
