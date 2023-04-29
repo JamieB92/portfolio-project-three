@@ -45,24 +45,13 @@ clear()
 
 name = input("Whats is your name ")
 
-while True:
-        
     # Hud 
-    print(f"{name} you are in the {current_deck['deck']}")
-
-# Movement
-    command = input("What direction do you want to go? ").strip().title()
-    if command in directions:
-        if command in current_deck:
-            current_deck = areas[current_deck[command]]
-        else:
-            print("you cant go that way")
-    else:
-        print("I dont understand that command?")
+    print(f"{name} you are in the {current_deck}")
+    print(f"Backpack : {backpack}")
     
     print(computer)
     # Find Item
-    if "Item" in areas[current_deck]:
+    if "Item" in areas[current_deck].keys():
 
         close_item = areas[current_deck]["Item"]
 
@@ -71,7 +60,7 @@ while True:
             print(f"You see a {close_item}")
         
     # Esacpe The ship Function
-    if "Escape" in areas[current_deck]:
+    if "Escape" in areas[current_deck].keys():
 
         if len(backpack) < 7:
             print(f"{name} You need to find the code to activate!")
@@ -99,7 +88,28 @@ while True:
             print(f"Computer: Well Done {name}, You did it!")
             print("Computer: Please find the access code for the escape pod")
             print("that are hidden in this room!")
- # Collect Items    
+
+    player_movement = input("Enter Direction ")
+
+    new_movement = player_movement.split(' ')
+
+    action = new_movement[0].title()
+
+    if len(new_movement) > 1:
+        item = new_movement[1:]
+        direction = new_movement[1].title()
+
+        item = ' '.join(item).title()
+
+# Movement
+    if action == 'Go':
+        try:
+            current_deck = areas[current_deck][direction]
+            computer = f"you've gone {direction}"
+
+        except ValueError:
+            computer = "You cant go that way"
+# Collect Items    
     if action == "Get":
 
         try:
