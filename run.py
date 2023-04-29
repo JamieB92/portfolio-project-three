@@ -60,58 +60,58 @@ while True:
     else:
         print("I dont understand that command?")
     
-#     print(computer)
-#     # Find Item
-#     if "Item" in areas[current_deck].keys():
+    print(computer)
+    # Find Item
+    if "Item" in areas[current_deck]:
 
-#         close_item = areas[current_deck]["Item"]
+        close_item = areas[current_deck]["Item"]
 
-#         if close_item not in backpack:
+        if close_item not in backpack:
 
-#             print(f"You see a {close_item}")
+            print(f"You see a {close_item}")
         
-#     # Esacpe The ship Function
-#     if "Escape" in areas[current_deck].keys():
+    # Esacpe The ship Function
+    if "Escape" in areas[current_deck]:
 
-#         if len(backpack) < 7:
-#             print(f"{name} You need to find the code to activate!")
+        if len(backpack) < 7:
+            print(f"{name} You need to find the code to activate!")
 
-#         else:
-#             print(f"Well Done {name}, You escaped with your life!")
-#             break
+        else:
+            print(f"Well Done {name}, You escaped with your life!")
+            break
     
-#     # Intruder interaction
-#     if "Intruder" in areas[current_deck].keys():
+    # Intruder interaction
+    if "Intruder" in areas[current_deck].keys():
 
-#         if len(backpack) < 6:
-#             print("As you enter the room you hear some noises")
-#             print("A giant creatue jumps out at you!!!")
-#             print("The giant Xenos rips you limb")
-#             print("GAME OVER !!!")
-#             break
+        if len(backpack) < 6:
+            print("As you enter the room you hear some noises")
+            print("A giant creatue jumps out at you!!!")
+            print("The giant Xenos rips you limb")
+            print("GAME OVER !!!")
+            break
 
-#         else:
-#             print("As you enter the room you hear some noises")
-#             print("A giant creatue jumps out at you!!!")
-#             print("You pull out the gun you found")
-#             print("You enter into battle with the creatue")
-#             print("You defeat the Xenos")
-#             print(f"Computer: Well Done {name}, You did it!")
-#             print("Computer: Please find the access code for the escape pod")
-#             print("that are hidden in this room!")
-#  # Collect Items    
-    # if action == "Get":
+        else:
+            print("As you enter the room you hear some noises")
+            print("A giant creatue jumps out at you!!!")
+            print("You pull out the gun you found")
+            print("You enter into battle with the creatue")
+            print("You defeat the Xenos")
+            print(f"Computer: Well Done {name}, You did it!")
+            print("Computer: Please find the access code for the escape pod")
+            print("that are hidden in this room!")
+ # Collect Items    
+    if action == "Get":
 
-    #     try:
-    #         if item == areas[current_deck]["Item"]:
+        try:
+            if item == areas[current_deck]["Item"]:
 
-    #             if item not in backpack:
+                if item not in backpack:
 
-    #                 backpack.append(areas[current_deck]["Item"])
-    #                 computer = f"you picked up the {item}"
-    #             else:
-    #                 computer = f"You already have {item}"
-    #         else:
-    #             computer = "The deck was empty"
-    #     except ValueError:
-    #         computer = "The deck was empty"
+                    backpack.append(areas[current_deck]["Item"])
+                    computer = f"you picked up the {item}"
+                else:
+                    computer = f"You already have {item}"
+            else:
+                computer = "The deck was empty"
+        except ValueError:
+            computer = "The deck was empty"
