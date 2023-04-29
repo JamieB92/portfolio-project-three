@@ -1,7 +1,7 @@
 import os
 
 
-# Introduction and Rules 
+# Introduction and Rules
 def intro():
     print("Welcome to Escape from ISS Ravana")
     print("Escape from ISS Ravana is a text based survival game.")
@@ -135,11 +135,14 @@ while True:
             clear()
 
     elif action == "Help":
-        print("Game Instructions!")
+        clear()
+        print("Game Instructions!\n")
         print("To move enter:")
-        print("'Go' and enter the direction 'Left, Right, Up, Down")
+        print("'Go' and enter the direction 'Left, Right, Up, Down\n ")
         print("To pick up item enter:")
-        print("'Get' and the items name'Banna'")
+        print("'Get' and the items name 'Spanner'\n")
+        print("To Exit the game type:\n'Exit'\n")
+        print("To Restart the game type:\n'Restart'\n")
     
     elif action == "Exit":
         clear()
