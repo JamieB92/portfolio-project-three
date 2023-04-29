@@ -48,7 +48,7 @@ name = input("Whats is your name ")
 while True:
         
     # Hud 
-    print(f"{name} you are in the {current_deck} \nBackpack : {backpack}\n{'-'* 27}")
+    print(f"{name} you are in the {current_deck} \nBackpack : {backpack}\n")
     
     print(computer)
     # Find Item
@@ -90,7 +90,7 @@ while True:
             print("Computer: Please find the access code for the escape pod")
             print("that are hidden in this room!")
 
-    player_movement = input("Enter Direction ")
+    player_movement = input("What is your next move? ")
 
     new_movement = player_movement.split(' ')
 
@@ -110,7 +110,7 @@ while True:
 
         except ValueError:
             computer = "You cant go that way"
- # Collect Items    
+# Collect Items    
     if action == "Get":
 
         try:
@@ -126,3 +126,11 @@ while True:
                 computer = "The deck was empty"
         except ValueError:
             computer = "The deck was empty"
+
+    elif action == "Help":
+        print("Game Instructions!")
+        print("To move enter:")
+        print("'Go' and enter the direction 'Left, Right, Up, Down")
+        print("To pick up item enter:")
+        print("'Get' and the items name'Banna'")
+
