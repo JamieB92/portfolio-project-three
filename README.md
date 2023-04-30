@@ -45,6 +45,10 @@ Within the hud this will inform the user which direction they have gone, whilst 
 
 <img src="./images/movement.png">
 
+If the user is unable to go that direction there will be a message telling them they cant go that way.
+
+<img src="./images/wrong-way.png">
+
 ## Get Item
 When the user sees an item they will have to type "get" followed by the items name, which will then be added to the backpack.<br>
 The hud will inform the user that they have picked the item up and the user will be able to see the item in the backpack.
@@ -74,7 +78,12 @@ If the user types in "Restart" the game will restart which will reset everything
 <img src="./images/restart-end.png">
 
 ## Help
+When the user enters in "Help" they will be presented with a list of directions on how to play the game:
+<img src="./images/help.png">
 
+## Exit
+When the user wants to exit the game before finishing they need to type in exit which will stop the game and will present this message:
+<img src="images/exit.png">
 
 ## Alien interaction
 ### Beat
@@ -97,3 +106,4 @@ When the user arrives at the escape pod and has all the correct items they will 
 
 If the user hasnt got enough items they will be presented with this message: 
 <img src="./images/escape-no.png">
+
