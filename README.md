@@ -5,3 +5,14 @@ The game has been built to test the players short term memory whilst telling a s
 Click <a href="https://escape-from-the-iss-ravana.herokuapp.com/" target=" _blank">here</a> to play the game. 
 
 <img src="./images/intro.png">
+
+
+# User Experience
+## Home Page
+When the user first comes to the game the will be presented with a welcome screen.<br>
+The welcome screen gives the user a brief intrudction about the game and how the user is able to complete the game.<br>
+Within the home page as well it gives the user the instructions on how to play the game by giving the user a list of the commands they can use in game.<br>
+Once the user is ready to play the screen tells the user to press enter to play.
+
+<img src="./images/intro.png"><br>
+<img src="./images/instructions.png">
