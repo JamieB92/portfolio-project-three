@@ -145,6 +145,40 @@ while True:
             print(" Titan: Please find the access code for the escape pod")
             print(" that are in the captains computer.")
 
+    if "Bug" in areas[current_deck].keys():
+
+        if len(backpack) < 2:
+            clear()
+            print(" As you enter the room you hear some noises ...")
+            print(" You see in the corner of your eye a small bug...")
+            print(" You walk over to investigate the creature..")
+            print(" The creature jumps of the wall and")
+            print(" attaches its self to your face!!")
+            print(" You struggle for a while but the creature is strong..")
+            print(" So you slowly suffocate and till you pass out")
+            print(" GAME OVER !!!\n")
+            print(" -        Hint       -       ")
+            print(" You need to collect 2 or more items")
+            
+            break
+
+        else:
+            clear()
+            print(" As you enter the room you hear some noises ...")
+            print(" You see in the corner of your eye a small bug...")
+            print(" You walk over to investigate the creature..")
+            print(" The creature jumps of the wall and")
+            print(" attaches its self to your face!!")
+            print(" You struggle for a while")
+            print(" But you manage to rip the creature of your face.")
+            print(" As the creature is ")
+            print(" The creature jumps of the wall and")
+            print(" attaches its self to your face!!")
+            print(" You struggle for a while but the creature is strong..")
+            print(" You rip the creature of you and throw it to the ground.")
+            print(" As the creature goes to wriggle off ")
+            print(" You Jump to your feet and stand on the bug")
+    
     player_movement = input("What is your next move? ").title()
     clear()
     new_movement = player_movement.split(' ')
