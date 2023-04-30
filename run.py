@@ -60,15 +60,15 @@ def intro():
 # Play Area
 areas = {
     'Cryo': {'Left': 'Lower', 'Right': 'Upper'},
-    'Lower': {'Left': 'Engine', 'Right': 'Cryo', 'Up': 'Recreation'},
+    'Lower': {'Left': 'Engine', 'Right': 'Cryo', 'Bug': 'Xenos'},
     'Engine': {'Right': 'Lower', 'Up': 'Landing', 'Item': 'Magazine'},
-    'landing': {'Up': 'Broken Escape Pod', 'Down': 'Engine'},
+    'Landing': {'Up': 'Broken Escape Pod', 'Down': 'Engine'},
     'Broken Escape Pod': {'Down': 'Landing', 'Item': 'Torch', 'Bug': 'Xenos'},
-    'Recreation': {'Right': 'Medical', 'Up': 'Escape Pod', 'Item': 'Grenade'},
+    'Recreation': {'Right': 'Medical', 'Up': 'Escape Pod', 'Item': 'Gun'},
     'Escape Pod': {'Down': 'Recreation', 'Escape': 'Use Pod'},
-    'Med': {'Left': 'Recreation', 'Right': 'Officers', 'Item': 'Bandages'},
-    'Officer': {'Left': 'Medical', 'Item': 'Gun'},
-    'Upper': {'Left': 'Cryo', 'Right': 'Bridge', 'Down': 'Crew'},
+    'Medical': {'Left': 'Recreation', 'Right': 'It', 'Item': 'Bandages'},
+    'It': {'Left': 'Medical', 'Down': 'Upper', 'Item': 'Grenade'},
+    'Upper': {'Left': 'Cryo', 'Right': 'Bridge', 'Up': 'It', 'Down': 'Crew'},
     'Crew': {'Up': 'Upper', 'Left': 'Armory', 'Item': 'Armour'},
     'Armory': {'Right': 'Crew', 'Item': 'Bullets'},
     'Bridge': {'Left': 'Upper', 'Intruder': 'Xenos', 'Item': 'Pin'}
@@ -83,15 +83,17 @@ computer = " "
 home()
 intro()
 clear()
-print("AI initating ...")
+print("AI intiating ...")
 print("Hi Im Titan your ships AI,")
-print("Welcome Aboard the ISS Ravana ")
-name = input("Please confirm your name?\n")
+print("Welcome Aboard the ISS Ravana\n")
+name = input("Please confirm your name? \n")
+clear()
 
 
 while True:
     # Hud
-    print(f"{name} you are in the {current_deck} deck. \nBackpack: {backpack}")
+    print(f"{name} you are in the {current_deck} deck.\n")
+    print(f"Backpack: {backpack}")
     
     print(computer)
     # Find Item
@@ -120,64 +122,72 @@ while True:
 
         if len(backpack) < 6:
             clear()
-            print(" As you enter the room you hear some noises")
-            print(" A giant creatue jumps out at you!!!")
-            print(" The giant Xenos rips you apart")
-            print(" GAME OVER !!!")
-            print(" You didnt collect all the items...")
+            print("     As you enter the room you hear a huge screetch     ")
+            print("          A giant creatue jumps out at you!!!           ")
+            print("              You pull out the gun and                  ")
+            print("          enter into battle with the creatue..          ")
+            print("          The creature jumps on top of of you           ")
+            print("        Your struggle to get the creature off ..        ")
+            print("        The strength of the creature is too much        ")
+            print("                You are unable to move                  ")
+            print("          The creature lets out one big screech         ")
+            print("                 and splits you in half\n               ")
+            print("                     GAME OVER !!!                    \n")
+            print("               -        Hint       -                    ")
+            print("             You need to collect 6 items                ")
+            print("               To defeat the creature                   ")
+       
             break
 
         else:
             clear()
-            print(" As you enter the room you hear some noises")
-            print(" A giant creatue jumps out at you!!!")
-            print(" You pull out the gun and")
-            print(" enter into battle with the creatue..")
-            print(" The creature jumps on top of of you.")
-            print(" In a manic struggle you manage to shoot the alien.")
-            print(" As the alien falls back..")
-            print(" You pull the pin of the grenade and launch the ")
-            print(" grenade at the creature.")
-            print(" The grenade goes off and the creautes remaisn")
-            print(" are spread across the room")
-            print(" You defeat the Xenos!!")
-            print(f" Titan: Well Done {name}, You did it!")
-            print(" Titan: Please find the access code for the escape pod")
-            print(" that are in the captains computer.")
+            print("     As you enter the room you hear a huge screetch     ")
+            print("          A giant creatue jumps out at you!!!           ")
+            print("              You pull out the gun and                  ")
+            print("          enter into battle with the creatue..          ")
+            print("          The creature jumps on top of of you.          ")
+            print("   In a manic struggle you manage to shoot the alien.   ")
+            print("               As the alien falls back..                ")
+            print("      You pull the pin of the grenade and launch the    ")
+            print("              grenade at the creature.                  ")
+            print("      The grenade goes off and the creautes remaisn     ")
+            print("             are spread across the room                 ")
+            print("               You defeat the Xenos!!                 \n")
+            print(f"         Titan: Well Done {name}, You did it!          ")
+            print("      Please find the access code for the escape pod    ")
+            print("          that are in the captains computer.            ")
 
     if "Bug" in areas[current_deck].keys():
 
         if len(backpack) < 2:
             clear()
-            print(" As you enter the room you hear some noises ...")
-            print(" You see in the corner of your eye a small bug...")
-            print(" You walk over to investigate the creature..")
-            print(" The creature jumps of the wall and")
-            print(" attaches its self to your face!!")
-            print(" You struggle for a while but the creature is strong..")
-            print(" So you slowly suffocate and till you pass out")
-            print(" GAME OVER !!!\n")
-            print(" -        Hint       -       ")
-            print(" You need to collect 2 or more items")
+            print("      As you enter the room you hear some noises ...     ")
+            print("      You see in the corner of your eye a small bug...   ")
+            print("      You walk over to investigate the creature..        ")
+            print("          The creature jumps of the wall and             ")
+            print("           attaches its self to your face!!              ")
+            print("   You struggle for a while but the creature is strong.. ")
+            print("      So you slowly suffocate and till you pass out    \n")
+            print("                     GAME OVER !!!                     \n")
+            print("               -        Hint       -                     ")
+            print("          You need to collect 2 or more items            ")
+            print("              To defeat the creature                     ")
             
             break
 
         else:
             clear()
-            print(" As you enter the room you hear some noises ...")
-            print(" You see in the corner of your eye a small bug...")
-            print(" You walk over to investigate the creature..")
-            print(" The creature jumps of the wall and")
-            print(" attaches its self to your face!!")
-            print(" You struggle for a while")
-            print(" But you manage to rip the creature of your face.")
-            print(" As the creature is ")
-            print(" The creature jumps of the wall and")
-            print(" attaches its self to your face!!")
-            print(" You struggle for a while but the creature is strong..")
-            print(" You rip the creature of you and throw it to the ground.")
-            print(" As the creature goes to wriggle off ")
-            print(" You Jump to your feet and stand on the bug")
+            print("     As you enter the room you hear some noises ...     ")
+            print("     You see in the corner of your eye a small bug...   ")
+            print("     You walk over to investigate the creature..        ")
+            print("          The creature jumps of the wall and            ")
+            print("           attaches its self to your face!!           \n")
+            print("               You struggle for a while                 ")
+            print("     But you manage to rip the creature of your face.   ")
+            print("             You rip the creature of you                ")
+            print("             and throw it to the ground.                ")
+            print("        As the creature goes to wriggle off             ")
+            print("     You Jump to your feet and stand on the bug         ")
     
     player_movement = input("What is your next move? ").title()
     clear()
@@ -220,13 +230,13 @@ while True:
 
     elif action == "Help":
         clear()
-        print(" Game Instructions!\n")
-        print(" To move enter:")
+        print("                   Game Instructions!                \n")
+        print("                    To move enter:                     ")
         print(" 'Go' and enter the direction 'Left, Right, Up, Down\n ")
-        print(" To pick up item enter:")
-        print(" 'Get' and the items name 'Spanner'\n")
-        print(" To Exit the game type:\n'Exit'\n")
-        print(" To Restart the game type:\n'Restart'\n")
+        print("                 To pick up item enter:                ")
+        print("            'Get' and the items name 'Spanner'       \n")
+        print("              To Exit the game type:\n'Exit'         \n")
+        print("           To Restart the game type:\n'Restart'      \n")
     
     elif action == "Exit":
         clear()
