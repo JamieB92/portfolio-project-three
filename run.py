@@ -159,7 +159,6 @@ while True:
             print(f"         Titan: Well done {name}, you did it!          ")
             print(f"      Please find the {close_item} for the escape pod  ")
             print("                on the captains computer.             \n")
-            
 
     if "Bug" in areas[current_deck].keys():
 
