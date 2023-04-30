@@ -55,8 +55,10 @@ See item:<br>
 Get item:<br>
 <img src="./images/item-get.png">
 
+If the user enters an item that is not in the room or if the room is empty the user will get a prompt telling them that the item doesnt exisist.<br>
+<img src="./images/doesnt-exisit.png">
 
-The user also has other commands in the game as well.<br>
+
 ## Restart
 If the user types in "Restart" the game will restart which will reset everything bar the users name:<br>
 ### Enter Restart

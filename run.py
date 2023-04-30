@@ -268,13 +268,13 @@ while True:
 
     elif action == "Help":
         clear()
-        print("                   Game Instructions!                \n")
-        print("                    To move, enter:                     ")
+        print(" Game Instructions!\n")
+        print(" To move, enter:")
         print(" 'Go' followed by the direction 'Left, Right, Up, Down\n ")
-        print("                 To pick up item enter:                ")
-        print("            'Get' and the items name 'Spanner'       \n")
-        print("              To Exit the game type:\n'Exit'         \n")
-        print("           To Restart the game type:\n'Restart'      \n")
+        print(" To pick up item enter:")
+        print(" 'Get' and the items name 'Spanner'\n")
+        print(" To Exit the game type:\n'Exit'\n")
+        print(" To Restart the game type:\n'Restart'\n")
 
     elif action == "Exit":
         clear()
