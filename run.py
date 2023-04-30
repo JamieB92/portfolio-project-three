@@ -59,24 +59,25 @@ def intro():
 
 # Play Area
 areas = {
-    'Mid': {'Left': 'Lower', 'Right': 'Recreation'},
-    'Lower': {'Left': 'Engine', 'Right': 'Mid', 'Up': 'landing', 'Down': '2'},
-    'Engine': {'Right': 'Lower', 'Item': 'Magazine'},
-    'Bridge': {'Left': 'Recreation', 'Intruder': 'Xenos', 'Item': 'Pin'},
-    'landing': {'Right': 'Med', 'Up': 'Escape Pod', 'Down': 'Lower'},
-    '2': {'Right': 'Armory', 'Up': 'Lower', 'Item': 'Torch'},
-    'Armory': {'Left': '2', 'Up': 'Mid', 'Item': 'Bullets'},
-    'Med': {'Left': '1', 'Down': 'Mid', 'right': 'office', 'Item': 'Bandages'},
-    'Recreation': {'Left': 'Mid', 'Right': 'Bridge', 'Item': 'Grenade'},
-    'Officer': {'Left': 'Med', 'Item': 'Gun'},
-    'Crew': {'Up': 'Recreation', 'Item': 'Armour'},
-    'Escape Pod': {'Down': '1', 'Escape': 'Use Pod'}
+    'Cryo': {'Left': 'Lower', 'Right': 'Upper'},
+    'Lower': {'Left': 'Engine', 'Right': 'Cryo', 'Up': 'Recreation'},
+    'Engine': {'Right': 'Lower', 'Up': 'Landing', 'Item': 'Magazine'},
+    'landing': {'Up': 'Broken Escape Pod', 'Down': 'Engine'},
+    'Broken Escape Pod': {'Down': 'Landing', 'Item': 'Torch', 'Bug': 'Xenos'},
+    'Recreation': {'Right': 'Medical', 'Up': 'Escape Pod', 'Item': 'Grenade'},
+    'Escape Pod': {'Down': 'Recreation', 'Escape': 'Use Pod'},
+    'Med': {'Left': 'Recreation', 'Right': 'Officers', 'Item': 'Bandages'},
+    'Officer': {'Left': 'Medical', 'Item': 'Gun'},
+    'Upper': {'Left': 'Cryo', 'Right': 'Bridge', 'Down': 'Crew'},
+    'Crew': {'Up': 'Upper', 'Left': 'Armory', 'Item': 'Armour'},
+    'Armory': {'Right': 'Crew', 'Item': 'Bullets'},
+    'Bridge': {'Left': 'Upper', 'Intruder': 'Xenos', 'Item': 'Pin'}
     }
 
 
 backpack = []
 
-current_deck = "Mid"
+current_deck = "Cryo"
 computer = " "
 
 home()
@@ -119,30 +120,30 @@ while True:
 
         if len(backpack) < 6:
             clear()
-            print("As you enter the room you hear some noises")
-            print("A giant creatue jumps out at you!!!")
-            print("The giant Xenos rips you apart")
-            print("GAME OVER !!!")
-            print("You didnt collect all the items...")
+            print(" As you enter the room you hear some noises")
+            print(" A giant creatue jumps out at you!!!")
+            print(" The giant Xenos rips you apart")
+            print(" GAME OVER !!!")
+            print(" You didnt collect all the items...")
             break
 
         else:
             clear()
-            print("As you enter the room you hear some noises")
-            print("A giant creatue jumps out at you!!!")
-            print("You pull out the gun and")
-            print("enter into battle with the creatue..")
-            print("The creature jumps on top of of you.")
-            print("In a manic struggle you manage to shoot the alien.")
-            print("As the alien falls back..")
-            print("You pull the pin of the grenade and launch the ")
-            print("grenade at the creature.")
-            print("The grenade goes off and the creautes remaisn")
-            print("are spread across the room")
-            print("You defeat the Xenos!!")
-            print(f"Titan: Well Done {name}, You did it!")
-            print("Titan: Please find the access code for the escape pod")
-            print("that are in the captains computer.")
+            print(" As you enter the room you hear some noises")
+            print(" A giant creatue jumps out at you!!!")
+            print(" You pull out the gun and")
+            print(" enter into battle with the creatue..")
+            print(" The creature jumps on top of of you.")
+            print(" In a manic struggle you manage to shoot the alien.")
+            print(" As the alien falls back..")
+            print(" You pull the pin of the grenade and launch the ")
+            print(" grenade at the creature.")
+            print(" The grenade goes off and the creautes remaisn")
+            print(" are spread across the room")
+            print(" You defeat the Xenos!!")
+            print(f" Titan: Well Done {name}, You did it!")
+            print(" Titan: Please find the access code for the escape pod")
+            print(" that are in the captains computer.")
 
     player_movement = input("What is your next move? ").title()
     clear()
@@ -185,13 +186,13 @@ while True:
 
     elif action == "Help":
         clear()
-        print("Game Instructions!\n")
-        print("To move enter:")
-        print("'Go' and enter the direction 'Left, Right, Up, Down\n ")
-        print("To pick up item enter:")
-        print("'Get' and the items name 'Spanner'\n")
-        print("To Exit the game type:\n'Exit'\n")
-        print("To Restart the game type:\n'Restart'\n")
+        print(" Game Instructions!\n")
+        print(" To move enter:")
+        print(" 'Go' and enter the direction 'Left, Right, Up, Down\n ")
+        print(" To pick up item enter:")
+        print(" 'Get' and the items name 'Spanner'\n")
+        print(" To Exit the game type:\n'Exit'\n")
+        print(" To Restart the game type:\n'Restart'\n")
     
     elif action == "Exit":
         clear()
