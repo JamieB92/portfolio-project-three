@@ -135,7 +135,7 @@ while True:
             print("                     GAME OVER !!!                    \n")
             print("               -        Hint       -                    ")
             print("             You need to collect 6 items                ")
-            print("               To defeat the creature                   ")
+            print("               To defeat the creature                 \n")
        
             break
 
@@ -155,7 +155,7 @@ while True:
             print("               You defeat the Xenos!!                 \n")
             print(f"         Titan: Well Done {name}, You did it!          ")
             print("      Please find the access code for the escape pod    ")
-            print("          that are in the captains computer.            ")
+            print("          that are in the captains computer.          \n")
 
     if "Bug" in areas[current_deck].keys():
 
@@ -171,7 +171,7 @@ while True:
             print("                     GAME OVER !!!                     \n")
             print("               -        Hint       -                     ")
             print("          You need to collect 2 or more items            ")
-            print("              To defeat the creature                     ")
+            print("              To defeat the creature                   \n")
             
             break
 
@@ -187,7 +187,39 @@ while True:
             print("             You rip the creature of you                ")
             print("             and throw it to the ground.                ")
             print("        As the creature goes to wriggle off             ")
-            print("     You Jump to your feet and stand on the bug         ")
+            print("     You Jump to your feet and stand on the bug       \n")
+
+    if "Bug2" in areas[current_deck].keys():
+
+        if len(backpack) < 4:
+            clear()
+            print("      As you enter the room you hear some noises ...     ")
+            print("      You see in the corner of your eye a small bug...   ")
+            print("      You walk over to investigate the creature..        ")
+            print("          The creature jumps of the wall and             ")
+            print("           attaches its self to your face!!              ")
+            print("   You struggle for a while but the creature is strong.. ")
+            print("      So you slowly suffocate and till you pass out    \n")
+            print("                     GAME OVER !!!                     \n")
+            print("               -        Hint       -                     ")
+            print("          You need to collect 2 or more items            ")
+            print("              To defeat the creature                   \n")
+            
+            break
+
+        else:
+            clear()
+            print("     As you enter the room you hear some noises ...     ")
+            print("     You see in the corner of your eye a small bug...   ")
+            print("     You walk over to investigate the creature..        ")
+            print("          The creature jumps of the wall and            ")
+            print("           attaches its self to your face!!           \n")
+            print("               You struggle for a while                 ")
+            print("     But you manage to rip the creature of your face.   ")
+            print("             You rip the creature of you                ")
+            print("             and throw it to the ground.                ")
+            print("        As the creature goes to wriggle off             ")
+            print("     You Jump to your feet and stand on the bug       \n")
     
     player_movement = input("What is your next move? ").title()
     clear()
