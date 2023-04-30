@@ -1,4 +1,5 @@
 import os
+import time
 
 
 def clear():
@@ -77,7 +78,6 @@ areas = {
 backpack = []
 
 current_deck = "Mid"
-
 computer = " "
 
 home()
@@ -87,9 +87,10 @@ print("AI initating ...")
 print("Hi Im Titan your ships AI,")
 print("Welcome Aboard the ISS Ravana ")
 name = input("Please confirm your name?\n")
+clear()
 
 while True:
-    clear()
+    
     # Hud
     print(f"{name} you are in the {current_deck} deck. \nBackpack: {backpack}")
     
@@ -129,12 +130,12 @@ while True:
             print("You pull out the gun you found")
             print("You enter into battle with the creatue")
             print("You defeat the Xenos")
-            print(f"Computer: Well Done {name}, You did it!")
-            print("Computer: Please find the access code for the escape pod")
+            print(f"Titan: Well Done {name}, You did it!")
+            print("Titan: Please find the access code for the escape pod")
             print("that are hidden in this room!")
 
     player_movement = input("What is your next move? ").title()
-
+    clear()
     new_movement = player_movement.split(' ')
 
     action = new_movement[0].title()
@@ -199,3 +200,9 @@ while True:
         current_deck = "Mid"
         computer = ' '
         intro()
+
+    else:
+        print("You have entered incorrectly")
+        print("Type help and hit enter for the game controls.")
+        time.sleep(7)
+        clear()
