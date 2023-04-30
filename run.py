@@ -125,6 +125,7 @@ while True:
 
         if len(backpack) < 7:
             clear()
+            print(f"               Backpack: {backpack}                    ")
             print(f"As you enter the {current_deck} you hear a huge screech")
             print("          A giant creature jumps out at you!!!          ")
             print("          You enter into battle with the creature..     ")
@@ -138,11 +139,11 @@ while True:
             print("               -        Hint       -                    ")
             print("             You need to collect 6 items                ")
             print("               To defeat the creature                 \n")
-
             break
 
         else:
             clear()
+            print(f"               Backpack: {backpack}                    ")
             print(f"As you enter the {current_deck} you hear a huge screech")
             print("          A giant creature jumps out at you!!!          ")
             print("              You pull out the gun and                  ")
@@ -158,11 +159,13 @@ while True:
             print(f"         Titan: Well done {name}, you did it!          ")
             print(f"      Please find the {close_item} for the escape pod  ")
             print("                on the captains computer.             \n")
+            
 
     if "Bug" in areas[current_deck].keys():
 
         if len(backpack) < 2:
             clear()
+            print(f"               Backpack: {backpack}                    ")
             print(f"As you enter the {current_deck} deck you hear some noises")
             print("      You see in the corner of your eye a small bug...   ")
             print("      You walk over to investigate the creature..        ")
@@ -179,6 +182,7 @@ while True:
 
         else:
             clear()
+            print(f"               Backpack: {backpack}                    ")
             print(f"As you enter the {current_deck} deck you hear some noises")
             print("     You see in the corner of your eye a small bug...   ")
             print("     You walk over to investigate the creature..        ")
@@ -194,6 +198,7 @@ while True:
 
         if len(backpack) < 4:
             clear()
+            print(f"               Backpack: {backpack}                    ")
             print(f"As you enter the {current_deck} you hear some noises ...")
             print("      You see in the corner of your eye a small bug...   ")
             print("      You walk over to investigate the creature..        ")
@@ -210,6 +215,7 @@ while True:
 
         else:
             clear()
+            print(f"               Backpack: {backpack}                    ")
             print(f"As you enter the {current_deck} you hear some noises ...")
             print("     You see in the corner of your eye a small bug...   ")
             print("     You walk over to investigate the creature..        ")
