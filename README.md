@@ -58,6 +58,9 @@ Get item:<br>
 If the user enters an item that is not in the room or if the room is empty the user will get a prompt telling them that the item doesnt exisist.<br>
 <img src="./images/doesnt-exisit.png">
 
+If the user enters an item they already have it will prompt them saying they already have the armour:
+<img src="./images/already-have-armour.png">
+
 
 ## Restart
 If the user types in "Restart" the game will restart which will reset everything bar the users name:<br>
@@ -70,6 +73,7 @@ If the user types in "Restart" the game will restart which will reset everything
 ### End
 <img src="./images/restart-end.png">
 
+## Help
 
 
 ## Alien interaction
