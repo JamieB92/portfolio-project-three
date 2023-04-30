@@ -54,7 +54,16 @@ Get item:<br>
 <img src="./images/item-get.png">
 
 The user also has other commands in the game as well.<br>
-If the user types in "Restart" the game will restart and rember the users name:<br>
+If the user types in "Restart" the game will restart which will reset everything bar the users name:<br>
+### Enter Restart
+<img src="./images/restart-begin.png">
+
+### Middle 
+<img src="./images/restart-middle.png">
+
+### End
+<img src="./images/restart-end.png">
+
 
 
 ## Alien interaction
