@@ -118,6 +118,7 @@ while True:
     if "Intruder" in areas[current_deck].keys():
 
         if len(backpack) < 6:
+            clear()
             print("As you enter the room you hear some noises")
             print("A giant creatue jumps out at you!!!")
             print("The giant Xenos rips you limb")
@@ -125,6 +126,7 @@ while True:
             break
 
         else:
+            clear()
             print("As you enter the room you hear some noises")
             print("A giant creatue jumps out at you!!!")
             print("You pull out the gun you found")
@@ -190,7 +192,7 @@ while True:
     
     elif action == "Exit":
         clear()
-        print(f"{name} You exit the Game")
+        print(f"{name} You have decided to quit you loose....")
         break
 
     elif action == "Restart":
@@ -200,9 +202,3 @@ while True:
         current_deck = "Mid"
         computer = ' '
         intro()
-
-    else:
-        print("You have entered incorrectly")
-        print("Type help and hit enter for the game controls.")
-        time.sleep(7)
-        clear()
