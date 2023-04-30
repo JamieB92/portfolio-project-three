@@ -37,13 +37,15 @@ In the hud it tells the user what deck they are on, it will show them their back
 
 <img src="./images/main.png">
 
-## User controls:
-The user is able to control the game by entering certain commands.<br> 
+## User controls - The user is able to control the game by entering certain commands:<br>
+
+## Move
 If the user wants to move between rooms they need to type "go" followed by a direction which is either left, right, up, or down, and then hit enter.<br>
 Within the hud this will inform the user which direction they have gone, whilst changing the name of the room to reflect the room the user has moved to.
 
 <img src="./images/movement.png">
 
+## Get Item
 When the user sees an item they will have to type "get" followed by the items name, which will then be added to the backpack.<br>
 The hud will inform the user that they have picked the item up and the user will be able to see the item in the backpack.
 
@@ -54,6 +56,7 @@ Get item:<br>
 <img src="./images/item-get.png">
 
 The user also has other commands in the game as well.<br>
+## Restart
 If the user types in "Restart" the game will restart which will reset everything bar the users name:<br>
 ### Enter Restart
 <img src="./images/restart-begin.png">
