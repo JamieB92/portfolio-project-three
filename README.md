@@ -66,3 +66,11 @@ If the user does not have the correct amount of items, the game will end and the
 Within this screen it will also give the user a hint at how many items they need to defeat the intruder.<Br>
 
 <img src="./images/loose.png">
+
+## Completing the game
+Once the user has defeated all three intruders the user needs to make their way to the escape pods to be able to complete the game.<br>
+When the user arrives at the escape pod and has all the correct items they will be presented with this message:<br>
+<img src="./images/game-win.png">
+
+If the user hasnt got enough items they will be presented with this message: 
+<img src="./images/escape-no.png">
