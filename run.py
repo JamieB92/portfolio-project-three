@@ -1,5 +1,4 @@
 import os
-import time
 
 
 def clear():
@@ -10,29 +9,29 @@ def clear():
 # Introduction and Rules
 def home():
     print("###############################################################")
-    print("#                                                             #")
     print("#            Welcome to Escape from the ISS Ravana            #")
     print("#-------------------------------------------------------------#")
     print("#                                                             #")
     print("#     Escape from ISS Ravana is a text based survival game    #")
-    print("#     Where the aim of the game is to escape from the ship    #")
-    print("#     But keep your witts about you as you explore the ship   #")
+    print("#     Where the aim of the game is to collect all the items   #")
+    print("#                and escape from the ship.                    #")
+    print("#     But keep your wits about you as you explore the ship    #")
     print("#            As you may not be the only one left!             #")
     print("#                                                             #")
     print("###############################################################")
-    print("#                                                             #")
     print("#                      Instructions                           #")
     print("#-------------------------------------------------------------#")
     print("#                                                             #")
     print("#                     Type Commands :                         #")
-    print("#       To Move between rooms type go and the direction:      #")
-    print("#                 'Go' - 'Left', 'Right', 'Up', 'Down'        #")
-    print("#       To Move between rooms type go and the direction       #")
-    print("#             Type 'Restart' to Restart the game              #")
-    print("#             Type 'Exit' to exit the game                    #")
+    print("#        To Move between rooms type go and the direction:     #")
+    print("#               'Go' - 'Left', 'Right', 'Up', 'Down'          #")
+    print("#                To get and item in a room type:              #")
+    print("#               'Get' and the items name 'Spanner'            #")
+    print("#               Type 'Restart' to Restart the game            #")
+    print("#                 Type 'Exit' to exit the game                #")
     print("#                                                             #")
     print("###############################################################")
-    input("#                  Press any key to continue                  #")
+    input("                   Press Enter to continue                     ")
     clear()
 
 
@@ -55,7 +54,7 @@ def intro():
     print("#     'I need to get of this ship....'                        #")
     print("#                                                             #")
     print("###############################################################")
-    input("#                  Press any key to continue                  #")
+    input("                  Press Enter to continue                      ")
 
 
 # Play Area
@@ -87,10 +86,9 @@ print("AI initating ...")
 print("Hi Im Titan your ships AI,")
 print("Welcome Aboard the ISS Ravana ")
 name = input("Please confirm your name?\n")
-clear()
+
 
 while True:
-    
     # Hud
     print(f"{name} you are in the {current_deck} deck. \nBackpack: {backpack}")
     
@@ -109,9 +107,11 @@ while True:
 
         if len(backpack) < 7:
             print(f"{name} You need to find the code to activate!")
+            print("Please make sure youve checked all rooms")
 
         else:
             print(f"Well Done {name}, You escaped with your life!")
+            print("Game completed!")
             break
     
     # Intruder interaction
@@ -121,20 +121,28 @@ while True:
             clear()
             print("As you enter the room you hear some noises")
             print("A giant creatue jumps out at you!!!")
-            print("The giant Xenos rips you limb")
+            print("The giant Xenos rips you apart")
             print("GAME OVER !!!")
+            print("You didnt collect all the items...")
             break
 
         else:
             clear()
             print("As you enter the room you hear some noises")
             print("A giant creatue jumps out at you!!!")
-            print("You pull out the gun you found")
-            print("You enter into battle with the creatue")
-            print("You defeat the Xenos")
+            print("You pull out the gun and")
+            print("enter into battle with the creatue..")
+            print("The creature jumps on top of of you.")
+            print("In a manic struggle you manage to shoot the alien.")
+            print("As the alien falls back..")
+            print("You pull the pin of the grenade and launch the ")
+            print("grenade at the creature.")
+            print("The grenade goes off and the creautes remaisn")
+            print("are spread across the room")
+            print("You defeat the Xenos!!")
             print(f"Titan: Well Done {name}, You did it!")
             print("Titan: Please find the access code for the escape pod")
-            print("that are hidden in this room!")
+            print("that are in the captains computer.")
 
     player_movement = input("What is your next move? ").title()
     clear()
@@ -154,11 +162,9 @@ while True:
         try:
             current_deck = areas[current_deck][direction]
             computer = f"you've gone {direction}"
-            clear()
 
         except Exception:
             computer = "You cant go that way"
-            clear()
 # Collect Items    
     if action == "Get":
 
@@ -169,13 +175,10 @@ while True:
 
                     backpack.append(areas[current_deck]["Item"])
                     computer = f"you picked up the {item}"
-                    clear()
                 else:
                     computer = f"You already have {item}"
-                    clear()
             else:
                 computer = "The deck was empty"
-                clear()
         except Exception:
             computer = "The deck was empty"
             clear()
