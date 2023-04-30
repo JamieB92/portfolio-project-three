@@ -285,6 +285,8 @@ while True:
         print(f"{name} You have restarted the game")
         clear()
         backpack.clear()
-        current_deck = "Mid"
-        computer = ' '
         intro()
+        clear()
+        current_deck = "Cryo"
+        computer = ' '
+        

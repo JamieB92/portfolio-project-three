@@ -53,6 +53,10 @@ See item:<br>
 Get item:<br>
 <img src="./images/item-get.png">
 
+The user also has other commands in the game as well.<br>
+If the user types in "Restart" the game will restart and rember the users name:<br>
+
+
 ## Alien interaction
 ### Beat
 When the user comes into contact with an intruder, the user will have to have collected a certain number of items to be able to defeat the intruders.<br> 
