@@ -63,7 +63,7 @@ areas = {
     'Lower': {'Left': 'Engine', 'Right': 'Cryo', 'Bug': 'Xenos'},
     'Engine': {'Right': 'Lower', 'Up': 'Landing', 'Item': 'Magazine'},
     'Landing': {'Up': 'Broken Escape Pod', 'Down': 'Engine'},
-    'Broken Escape Pod': {'Down': 'Landing', 'Item': 'Torch', 'Bug': 'Xenos'},
+    'Broken Escape Pod': {'Down': 'Landing', 'Item': 'Torch', 'Bug2': 'Xenos'},
     'Recreation': {'Right': 'Medical', 'Up': 'Escape Pod', 'Item': 'Gun'},
     'Escape Pod': {'Down': 'Recreation', 'Escape': 'Use Pod'},
     'Medical': {'Left': 'Recreation', 'Right': 'It', 'Item': 'Bandages'},
@@ -108,7 +108,7 @@ while True:
     # Esacpe The ship Function
     if "Escape" in areas[current_deck].keys():
 
-        if len(backpack) < 7:
+        if len(backpack) < 8:
             print(f"{name} You need to find the code to activate!")
             print("Please make sure youve checked all rooms")
 
@@ -120,9 +120,9 @@ while True:
     # Intruder interaction
     if "Intruder" in areas[current_deck].keys():
 
-        if len(backpack) < 6:
+        if len(backpack) < 7:
             clear()
-            print("     As you enter the room you hear a huge screetch     ")
+            print(f"As you enter the {current_deck} you hear a huge screetch")
             print("          A giant creatue jumps out at you!!!           ")
             print("              You pull out the gun and                  ")
             print("          enter into battle with the creatue..          ")
@@ -141,7 +141,7 @@ while True:
 
         else:
             clear()
-            print("     As you enter the room you hear a huge screetch     ")
+            print(f"As you enter the {current_deck} you hear a huge screetch")
             print("          A giant creatue jumps out at you!!!           ")
             print("              You pull out the gun and                  ")
             print("          enter into battle with the creatue..          ")
@@ -154,14 +154,14 @@ while True:
             print("             are spread across the room                 ")
             print("               You defeat the Xenos!!                 \n")
             print(f"         Titan: Well Done {name}, You did it!          ")
-            print("      Please find the access code for the escape pod    ")
-            print("          that are in the captains computer.          \n")
+            print(f"      Please find the {close_item} for the escape pod  ")
+            print("                on the capitains computer.            \n")
 
     if "Bug" in areas[current_deck].keys():
 
         if len(backpack) < 2:
             clear()
-            print("      As you enter the room you hear some noises ...     ")
+            print(f"As you enter the {current_deck} deck you hear some noises")
             print("      You see in the corner of your eye a small bug...   ")
             print("      You walk over to investigate the creature..        ")
             print("          The creature jumps of the wall and             ")
@@ -177,7 +177,7 @@ while True:
 
         else:
             clear()
-            print("     As you enter the room you hear some noises ...     ")
+            print(f"As you enter the {current_deck} deck you hear some noises")
             print("     You see in the corner of your eye a small bug...   ")
             print("     You walk over to investigate the creature..        ")
             print("          The creature jumps of the wall and            ")
@@ -193,7 +193,7 @@ while True:
 
         if len(backpack) < 4:
             clear()
-            print("      As you enter the room you hear some noises ...     ")
+            print(f"As you enter the {current_deck} you hear some noises ...")
             print("      You see in the corner of your eye a small bug...   ")
             print("      You walk over to investigate the creature..        ")
             print("          The creature jumps of the wall and             ")
@@ -202,14 +202,14 @@ while True:
             print("      So you slowly suffocate and till you pass out    \n")
             print("                     GAME OVER !!!                     \n")
             print("               -        Hint       -                     ")
-            print("          You need to collect 2 or more items            ")
+            print("          You need to collect 4 or more items            ")
             print("              To defeat the creature                   \n")
             
             break
 
         else:
             clear()
-            print("     As you enter the room you hear some noises ...     ")
+            print(f"As you enter the {current_deck} you hear some noises ...")
             print("     You see in the corner of your eye a small bug...   ")
             print("     You walk over to investigate the creature..        ")
             print("          The creature jumps of the wall and            ")
@@ -220,6 +220,7 @@ while True:
             print("             and throw it to the ground.                ")
             print("        As the creature goes to wriggle off             ")
             print("     You Jump to your feet and stand on the bug       \n")
+            print(f"                You see a {close_item}                 ")
     
     player_movement = input("What is your next move? ").title()
     clear()
