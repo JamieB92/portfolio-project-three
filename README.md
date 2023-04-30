@@ -37,7 +37,7 @@ In the hud it tells the user what deck they are on, it will show them their back
 
 <img src="./images/main.png">
 
-### User controls:
+## User controls:
 The user is able to control the game by entering certain commands.<br> 
 If the user wants to move between rooms they need to type go and a direction which is either left, right, up, down and hit enter.<br>
 Within the hud this will inform the user which direction they have gone whilst changing the name of the room to reflect the room the user has moved to.
@@ -52,3 +52,17 @@ See item:<br>
 
 Get item:<br>
 <img src="./images/item-get.png">
+
+## Alien interaction
+### Beat
+When the user comes in contact with an intruder the user will have to have collected a certain number of items to be able to defeat the intruders.<br> 
+There are 3 intruders in the game each varying a different amount of items to defeat them.<br> 
+If the user has the correct amount the screen will inform the user on how the defeated the intruder and also if their is an item in the room.<br>
+
+<img src="./images/win.png">
+
+### Loose
+If the user does not have the correct amount of items the game will end and the user will be told.<br> 
+Within this screen it will also give the user a hint at how many items they need to defeat the intruder.<Br>
+
+<img src="./images/loose.png">
