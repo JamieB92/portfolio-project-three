@@ -107,3 +107,7 @@ When the user arrives at the escape pod and has all the correct items they will 
 If the user hasnt got enough items they will be presented with this message: 
 <img src="./images/escape-no.png">
 
+### User Experience Feed Back
+
+## Shannon White - 30/04/2023
+The overall game experience was very positive. The game provides plenty of challenges to overcome while you work your way around the ship. The game has an extra dimension of having to remember the route you take, so it is highly recommended that you make a note of the places you've been so you can create the map as you play the game. The game is logical and easy to follow, and with the added objective of defeating the boss to obtain the pin before being able to escape the ship, it is complex yet enjoyable.
