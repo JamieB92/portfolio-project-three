@@ -23,3 +23,32 @@ Here this gives the user a story before they enter into the game. <br>
 For the user to continue on the must hit enter.
 
 <img src="./images/story.png">
+
+## AI introduction
+Once the user arrives at this screen the ships AI will introduce itself and ask for the users name.<br>
+Giving the user the ability to choose their name makes the game more interactive.<br>
+Once the user as entered their name they will be taken to the next screen.<br>
+
+<img src="./images/name.png">
+
+## Game Screen
+Now the user has arrived at the game screen they will be able to their hud.<br>
+In the hud it tells the user what deck they are on, it will show them their backpack which will be empty and will aske the user to enter their next move.<br>
+
+<img src="./images/main.png">
+
+### User controls:
+The user is able to control the game by entering certain commands.<br> 
+If the user wants to move between rooms they need to type go and a direction which is either left, right, up, down and hit enter.<br>
+Within the hud this will inform the user which direction they have gone whilst changing the name of the room to reflect the room the user has moved to.
+
+<img src="./images/movement.png">
+
+When the user sees an item they will have to type get and the items name which will then be added to the backpack.<br>
+The hud will inform the user that they have picked the item up and the user will be able to see the item in the backpack.
+
+See item:<br>
+<img src="./images/item-see.png">
+
+Get item:<br>
+<img src="./images/item-get.png">
