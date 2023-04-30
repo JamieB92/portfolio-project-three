@@ -55,6 +55,7 @@ See item:<br>
 Get item:<br>
 <img src="./images/item-get.png">
 
+
 The user also has other commands in the game as well.<br>
 ## Restart
 If the user types in "Restart" the game will restart which will reset everything bar the users name:<br>

@@ -261,9 +261,9 @@ while True:
                 else:
                     computer = f"You already have {item}"
             else:
-                computer = "The deck was empty"
+                computer = "That item doesnt exisit"
         except Exception:
-            computer = "The deck was empty"
+            computer = "That item doesnt exisit"
             clear()
 
     elif action == "Help":
