@@ -1,6 +1,7 @@
 import os
 
 
+# Clears Terminal function
 def clear():
 
     os.system("cls" if os.name == "nt" else "clear")
@@ -38,6 +39,7 @@ def home():
     clear()
 
 
+# Brief Stroy introduction
 def intro():
     print("###############################################################")
     print("#                                                             #")
@@ -77,38 +79,45 @@ areas = {
     'Bridge': {'Left': 'Upper', 'Intruder': 'Xenos', 'Item': 'Pin'}
     }
 
-
+# Backpack for storing items
 backpack = []
-
+# Shows current deck
 current_deck = "Cryo"
+# Shows message from computer
 computer = " "
 
 home()
 intro()
 clear()
+# AI intruduction
 print("AI initiating ...")
 print("Hi, I'm Titan, the ships AI,")
 print("Welcome Aboard the ISS Ravana\n")
+# user name input
 name = input("Please confirm your name? \n")
 clear()
 
 
 while True:
     # Hud
+    # Shows the users name and current location
     print(f"{name} you are in the {current_deck} deck.\n")
+    # Shows avalible items in backpack
     print(f"Backpack: {backpack}")
-
+    # Shows last message from the computer
     print(computer)
-    # Find Item
     if "Item" in areas[current_deck].keys():
-
         close_item = areas[current_deck]["Item"]
 
         if close_item not in backpack:
 
             print(f"You see a {close_item}")
+    """ checks it see if Item is in curent deck.
 
-    # Esacpe The ship Function
+    prints out the Items within the room if
+    the item is not in backpack
+    """
+    # Esacpe The ship
     if "Escape" in areas[current_deck].keys():
 
         if len(backpack) < 8:
@@ -119,8 +128,14 @@ while True:
             print(f"Well done {name}, you escaped with your life!")
             print("Game completed!")
             break
+        """ First checks to see if escape is in the current room.
 
-    # Intruder interaction
+            Checks to see if the length of the backpack is smaller than 8
+            If the length is smaller the loop will carrys on
+            If the length is 8 or longer the loop will break and game
+            completed.
+            """
+    # Intruder interaction Boss
     if "Intruder" in areas[current_deck].keys():
 
         if len(backpack) < 7:
@@ -159,7 +174,14 @@ while True:
             print(f"         Titan: Well done {name}, you did it!          ")
             print(f"      Please find the {close_item} for the escape pod  ")
             print("                on the captains computer.             \n")
+            """ First checks to see if intruder is in the current room.
 
+            Checks to see if the length of the backpack is smaller than 7
+            If the length is smaller the loop will be broken.
+            If the length is 7 or longer will pass through
+            to defeat the intruder.
+            """
+    # Intruder interaction Bug 1
     if "Bug" in areas[current_deck].keys():
 
         if len(backpack) < 2:
@@ -176,7 +198,6 @@ while True:
             print("               -        Hint       -                     ")
             print("          You need to collect 2 or more items            ")
             print("              To defeat the creature                   \n")
-
             break
 
         else:
@@ -192,7 +213,14 @@ while True:
             print("             You throw it to the ground.                ")
             print("        As the creature begins to wriggle away,         ")
             print("     you jump to your feet and stand on the bug.      \n")
+            """ First checks to see if Bug is in the current room.
 
+            Checks to see if the length of the backpack is smaller than 2
+            If the length is smaller the loop will be broken.
+            If the length is 2 or longer it will aloow the user to defeat
+            the intruder and pass through.
+            """
+    # Intruder interaction Bug 2
     if "Bug2" in areas[current_deck].keys():
 
         if len(backpack) < 4:
@@ -226,11 +254,17 @@ while True:
             print("        As the creature begins to wriggle away,         ")
             print("     you jump to your feet and stand on the bug.      \n")
             print(f"                You see a {close_item}                 ")
+            """ First checks to see if Bug is in the current room.
 
+            Checks to see if the length of the backpack is smaller than 4
+            If the length is smaller the loop will be broken.
+            If the length is 4 or longer it will aloow the user to defeat
+            the intruder and pass through.
+            """
+# Player input
     player_movement = input("What is your next move? ").title()
     clear()
     new_movement = player_movement.split(' ')
-
     action = new_movement[0].title()
 
     if len(new_movement) > 1:
@@ -238,8 +272,8 @@ while True:
         direction = new_movement[1].title()
 
         item = ' '.join(item).title()
-
-# Movement
+    """" converts players inputs into list """
+# Go between rooms
     if action == 'Go':
 
         try:
@@ -248,6 +282,7 @@ while True:
 
         except Exception:
             computer = "You can't go that way"
+    """" compares players input against list to move direction."""
 # Collect Items
     if action == "Get":
 
@@ -265,7 +300,10 @@ while True:
         except Exception:
             computer = "That item doesnt exisit"
             clear()
-
+        """" compares players input against list.
+        Checks to see if item is already in backpack.
+        If it is not it appends to backpack."""
+    # Help Menu
     elif action == "Help":
         clear()
         print(" Game Instructions!\n")
@@ -275,12 +313,12 @@ while True:
         print(" 'Get' and the items name 'Spanner'\n")
         print(" To Exit the game type:\n'Exit'\n")
         print(" To Restart the game type:\n'Restart'\n")
-
+    # Exit The Game
     elif action == "Exit":
         clear()
         print(f"{name} You have decided to quit. You lose....")
         break
-
+    # Restart Game
     elif action == "Restart":
         print(f"{name} You have restarted the game")
         clear()
