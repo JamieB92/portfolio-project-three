@@ -62,7 +62,7 @@ Get item:<br>
 If the user enters an item that is not in the room or if the room is empty the user will get a prompt telling them that the item doesnt exisist.<br>
 <img src="./images/doesnt-exisit.png">
 
-If the user enters an item they already have it will prompt them saying they already have the armour:
+If the user enters an item they already have it will prompt them saying they already have the armour:<br>
 <img src="./images/already-have-armour.png">
 
 
@@ -78,11 +78,11 @@ If the user types in "Restart" the game will restart which will reset everything
 <img src="./images/restart-end.png">
 
 ## Help
-When the user enters in "Help" they will be presented with a list of directions on how to play the game:
+When the user enters in "Help" they will be presented with a list of directions on how to play the game:<br>
 <img src="./images/help.png">
 
 ## Exit
-When the user wants to exit the game before finishing they need to type in exit which will stop the game and will present this message:
+When the user wants to exit the game before finishing they need to type in exit which will stop the game and will present this message:<br>
 <img src="images/exit.png">
 
 ## Alien interaction
@@ -101,10 +101,12 @@ Within this screen it will also give the user a hint at how many items they need
 
 ## Completing the game
 Once the user has defeated all three intruders the user needs to make their way to the escape pods to be able to complete the game.<br>
-When the user arrives at the escape pod and has all the correct items they will be presented with this message:<br>
+When the user arrives at the escape pod and has all the correct items they will be presented with this message:
+<br>
 <img src="./images/game-win.png">
 
-If the user hasnt got enough items they will be presented with this message: 
+If the user hasnt got enough items they will be presented with this message:
+<br> 
 <img src="./images/escape-no.png">
 
 # Flow Charts
