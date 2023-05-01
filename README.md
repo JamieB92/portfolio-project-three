@@ -93,19 +93,19 @@ If the user has the required amount of items, the screen will inform the user th
 
 <img src="./images/win.png">
 
-### Loose
+### Lose
 If the user does not have the correct amount of items, the game will end and the user will be informed that they have lost the game.<br> 
 Within this screen it will also give the user a hint at how many items they need to defeat the intruder.<Br>
 
 <img src="./images/loose.png">
 
 ## Completing the game
-Once the user has defeated all three intruders the user needs to make their way to the escape pods to be able to complete the game.<br>
+Once the user has defeated all three intruders the user needs to make their way to the escape pod to be able to complete the game.<br>
 When the user arrives at the escape pod and has all the correct items they will be presented with this message:
 <br>
 <img src="./images/game-win.png">
 
-If the user hasnt got enough items they will be presented with this message:
+If the user hasn't got enough items they will be presented with this message:
 <br> 
 <img src="./images/escape-no.png">
 
@@ -121,7 +121,7 @@ If the user hasnt got enough items they will be presented with this message:
 # User Experience Feedback
 
 ## Shannon White - 30/04/2023
-The overall game experience was very positive. The game provides plenty of challenges to overcome while you work your way around the ship. The game has an extra dimension of having to remember the route you take, so it is highly recommended that you make a note of the places you've been so you can create the map as you play the game. The game is logical and easy to follow, and with the added objective of defeating the boss to obtain the pin before being able to escape the ship, it is complex yet enjoyable.
+The overall game experience was very positive. The game provides plenty of challenges to overcome while you work your way around the ship. The game has an extra dimension of having to remember the route you take, so it is highly recommended that you make a note of the places you've been so you can create the map as you play the game. The game is logical and easy to follow, and with the added objective of defeating the boss to obtain the pin before being able to escape the ship, it is complex yet enjoyable. The instructions are easy to follow and there are no unexpected screens that appear when they shouldn't.
 
 # Testing
 
@@ -134,7 +134,7 @@ I have tested my code through the CI Python Linter provided which passed with no
 
 * Is the user able to access the Intro Story by only hitting enter? 
     * Yes, I have tested this by hitting enter which takes the user to the Intro Story.
-    * I have been able to test this by pressing other keys which doesnt take the user to the next screen.
+    * I have been able to test this by pressing other keys which don't take the user to the next screen.
 
 * Once Enter has been hit does the user see the correct screen load? 
     * Yes, it loads the correct screen for the user.
@@ -146,7 +146,7 @@ I have tested my code through the CI Python Linter provided which passed with no
 
 * Is the user able to access the AI Introduction by only hitting enter? 
     * Yes, I have tested this by hitting enter which takes the user to the AI Introduction.
-    * I have been able to test this by pressing other keys which doesnt take the user to the next screen.
+    * I have been able to test this by pressing other keys which don't take the user to the next screen.
 
 * Once Enter has been hit does the user see the correct screen load? 
     * Yes, it loads the correct screen for the user.
@@ -156,14 +156,14 @@ I have tested my code through the CI Python Linter provided which passed with no
 * Is the user able to access the Game Screen once a name has been entered? 
     * Yes, I have tested this by entering a name and then hitting enter which takes the user to the Game Screen.
 
-* Is the user able to enter the game screen with out entering a name? 
-    * Yes, The user is able to do this.
+* Is the user able to enter the Game Screen without entering a name? 
+    * Yes, the user is able to do this.
     * I have tested this by hitting enter before entering a name.
 
 * Once Enter has been hit does the user see the correct screen load? 
     * Yes, it loads the correct screen for the user.
 
-* Is the user able to create a username style name e.g with numbers and symbols?
+* Is the user able to create a username-style name e.g with numbers and symbols?
     * Yes, I have been able to test this by adding numbers and symbols to the name and hitting enter.
 
 ## Game 
@@ -179,11 +179,11 @@ I have tested my code through the CI Python Linter provided which passed with no
     * I have tested this by changing rooms which changes the room in the hud.
 
 * Is the user able to use an incorrect movement? 
-    * No, they are unable to and causes no effect to the game. 
+    * No, they are unable to use the incorrect movements, which causes no effect to the game. 
     * I have tested this by entering incorrect commands.
 
-* If the user cant move that way does the game tell them ?
-    * Yes, the user is informed that they cant go that way. 
+* If the user can't move in the direction inputted, does the game inform them of an incorrect movement?
+    * Yes, the user is informed that they can't go that way. 
     * I have tested this by entering a direction that leads to a wall.
 
 * If the user defeats an intruder are they able to move about the ship?
@@ -199,19 +199,19 @@ I have tested my code through the CI Python Linter provided which passed with no
 
 * Does the hud tell the user when they have picked up the item? 
     * Yes, the user is able to see which item they have picked up.
-    * I have tested this by picking up the item and the hud telling me ive picked item up.
+    * I have tested this by picking up the item and observing the hud informing me that I have picked the item up.
 
 * Is the user able to pick up an incorrect item? 
     * No, they are unable to pick up an incorrect item. 
-    * I have tested this by entering incorrect items and the hud telling me that the item doesnt exisist.
+    * I have tested this by entering incorrect items and observing the hud informing me that the item doesn't exist.
 
 * Does the item get added to the backpack once picked up?
-    * Yes, the user is able to see the item gets added to the backpack. 
+    * Yes, the user is able to see the item get added to the backpack. 
     * I have tested this by entering get (item_name) and seeing it get added to backpack.
 
 * Does the backpack show in the intruder screens? 
     * Yes, the user is still able to see the backpack in the intruder screen.
-    * I have tested this by entering the intruder scene.
+    * I have tested this by entering the intruder scene and observing the presence of the backpack.
 
 * Is the user able to pick up an item after defeating an intruder?
     Yes, the user is able to enter get (item_name) which appends the item to the backpack.
@@ -219,24 +219,24 @@ I have tested my code through the CI Python Linter provided which passed with no
 
 ### Restart
 
-* Is the user able to enter restart and the game restarts ? 
+* Is the user able to enter restart and the game restarts? 
     * Yes, the user is able restart the game. 
     * I have tested this by entering restart and seeing the game restart.
 
-* Does the resart function keep the username?
+* Does the restart function keep the username?
     * Yes, the user is able to keep their name after restart has been called.
     * I have tested this by enter restart and see the name entered still in the hud.
 
-* Does the Position of the player reset ? 
+* Does the position of the player reset? 
     * Yes, the players position resets.
-    * I have tested this by restarting the game and starting back at the Cryo deck.
+    * I have tested this by restarting the game and starting back at the Cryo Deck.
 
-* Does the contents of the backpack reset? 
+* Do the contents of the backpack reset? 
     * Yes, the user starts with an empty backpack when the function is called.
-    * I have tested this by having items in the back pack, entering restart and getting back to the hud with no items.
+    * I have tested this by having items in the backpack, entering restart and getting back to the hud with no items.
 
-* Does the console clear after restart has been entered ? 
-    * Yes the user sees the intro screen again, once the user is in the game there is no previous commands left.
+* Does the console clear after restart has been entered? 
+    * Yes the user sees the intro screen again, once the user is in the game there are no previous commands left.
     * I have tested this by restarting the game after playing.
 
 ### Exit
@@ -245,22 +245,22 @@ I have tested my code through the CI Python Linter provided which passed with no
     * Yes, the user is able to stop the game.
     * I have tested this by entering exit.
 
-* Does the exit message show ? 
+* Does the exit message show? 
     * Yes, the user is able to see the exit message on exit.
     * I have tested this by entering exit.
 
 ### Help
 
 * Is the user able to see the instructions when help is entered? 
-    * Yes, the user is able to the help menu.
-    * I have tested this byu entering help.
-
-* Is the menu clear and easy to read? 
-    * Yes, the user is able to read the instructions cleary.
+    * Yes, the user is able to see the help menu.
     * I have tested this by entering help.
 
-* Is the hud visable at the below the menu? 
-    * Yes, the user is able to see this.
+* Is the menu clear and easy to read? 
+    * Yes, the user is able to read the instructions clearly.
+    * I have tested this by entering help.
+
+* Is the hud visable below the menu? 
+    * Yes, the user is able to see the hud below the menu.
     * I have tested this by entering help. 
 
 * Does the help menu clear after entering next move ? 
@@ -272,16 +272,16 @@ I have tested my code through the CI Python Linter provided which passed with no
 
 * Does the correct message show depending on the items in the users backpack?
     * The user is able to see the correct screen dependent on items in backpack.
-    * I have tested this by having the correct items in the backpack and seeing defeat the intruder screen.
+    * I have tested this by having the correct items in the backpack and seeing the defeat the intruder screen.
     * I have tested this by having the incorrect items in the backpack and seeing the game over screen. 
 
 * Does the game end when you are defeated by an intruder. 
     * The users game ends when they are defeated and are unable to carry on.
-    * I have tested this by being defeated by the intruder and getting game over.
+    * I have tested this by being defeated by the intruder and seeing the game over message.
 
-* Does the hint show the correct number of items needed to defeat the intruders on game over.
+* Does the hint show the correct number of items needed to defeat the intruders on game over?
     * Yes, the users is presented with the correct number. 
-    * I have tested this by being defeated by the intruder and getting game over.
+    * I have tested this by being defeated by the intruder and seeing the game over message displaying the hint.
 
 ### Escape Pod 
 
@@ -292,7 +292,7 @@ I have tested my code through the CI Python Linter provided which passed with no
 * Does the correct message show depending on the items in the users backpack?
     * The user is able to see the correct screen dependent on items in the backpack.
     * I have tested this by having the correct items in the backpack and seeing the complete game screen.
-    * I have tested this by having the incorrect items in the backpack and the game tell me to find the code.
+    * I have tested this by having the incorrect items in the backpack and the game informing me to find the code.
 
 * Is the user able to move out of the escape pod when they have the incorrect number of items ? 
     * Yes, the user is able to move out of the escape pod and carry the game on.
