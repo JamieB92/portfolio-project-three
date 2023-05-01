@@ -283,10 +283,6 @@ I have tested my code through the CI Python Linter provided:
     * I have tested this by having the correct items in the backpack and seeing the complete game screen.
     * I have tested this by having the incorrect items in the backpack and the game tell me to find the code.
 
-
-
-
-
-
-
-
+* Is the user able to move out of the escape pod when they have the incorrect number of items ? 
+    * Yes, the user is able to move out of the escape pod and carry the game on.
+    * I have tested this by entering the escape pod with the incorrcect number and was able to move out of the area.

@@ -63,7 +63,7 @@ def intro():
 # Play Area
 areas = {
     'Cryo': {'Left': 'Lower', 'Right': 'Upper'},
-    'Lower': {'Left': 'Engine', 'Right': 'Cryo', 'Bug': 'Xenos'},
+    'Lower': {'Left': 'Engine', 'Right': 'Cryo'},
     'Engine': {'Right': 'Lower', 'Up': 'Landing', 'Item': 'Magazine'},
     'Landing': {'Up': 'Broken Escape Pod', 'Down': 'Engine'},
     'Broken Escape Pod': {'Down': 'Landing', 'Item': 'Torch', 'Bug2': 'Xenos'},
@@ -73,7 +73,7 @@ areas = {
     'It': {'Left': 'Medical', 'Down': 'Upper', 'Item': 'Grenade'},
     'Upper': {'Left': 'Cryo', 'Right': 'Bridge', 'Up': 'It', 'Down': 'Crew'},
     'Crew': {'Up': 'Upper', 'Left': 'Armory', 'Item': 'Armour'},
-    'Armory': {'Right': 'Crew', 'Item': 'Bullets'},
+    'Armory': {'Right': 'Crew', 'Item': 'Bullets', 'Bug': 'Xenos'},
     'Bridge': {'Left': 'Upper', 'Intruder': 'Xenos', 'Item': 'Pin'}
     }
 
