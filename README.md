@@ -320,3 +320,14 @@ I have tested my code through the CI Python Linter provided:
 * <a href="https://github.com/" target=" _blank">GitHub</a>
 * <a href="https://git-scm.com/" target=" _blank">Git</a>
 * <a href="https://www.heroku.com/" target=" _blank">Heroku</a>
+
+# Credits
+
+### Tutorials
+* Bauber Youtube - <a href="https://www.youtube.com/watch?v=ERLT1iU0DVY&list=PL1-slM0ZOosXf2oQYZpTRAoeuo0TPiGpm&index=4&ab_channel=Baober" target=" _blank">Video 1 - Libaries, </a> 
+<a href="https://www.youtube.com/watch?v=_n0_vndSuYM&list=PL1-slM0ZOosXf2oQYZpTRAoeuo0TPiGpm&index=5&ab_channel=Baober" target=" _blank">  Video 2 - Interactivity</a>
+
+ * Corey Schafer Youtube - <a href="https://www.youtube.com/watch?v=daefaLgNkw0&ab_channel=CoreySchafer" target=" _blank">Itterating Through Libaries</a>
+
+* Dante Lee Youtube - <a href="https://www.youtube.com/watch?v=lI6S2-icPHE&t=392s&ab_channel=DanteLee" target=" _blank">Here</a>
+

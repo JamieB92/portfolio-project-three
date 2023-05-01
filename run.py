@@ -262,6 +262,7 @@ while True:
             the intruder and pass through.
             """
 # Player input
+# Code taken from Dante Lee tutorial
     player_movement = input("What is your next move? ").title()
     clear()
     new_movement = player_movement.split(' ')
@@ -273,6 +274,7 @@ while True:
 
         item = ' '.join(item).title()
     """" converts players inputs into list """
+# End of code taken
 # Go between rooms
     if action == 'Go':
 
