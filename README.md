@@ -259,7 +259,7 @@ I have tested my code through the CI Python Linter provided:
 
 ### Intruder Interaction
 
-* Does the correct message show depending on the items on the users backpack items?
+* Does the correct message show depending on the items in the users backpack?
     * The user is able to see the correct screen dependent on items in backpack.
     * I have tested this by having the correct items in the backpack and seeing defeat the intruder screen.
     * I have tested this by having the incorrect items in the backpack and seeing the game over screen. 
@@ -271,6 +271,18 @@ I have tested my code through the CI Python Linter provided:
 * Do the hints show the correct number of items needed to defeat the intruders on game over.
     * Yes the users is presented with the correct number. 
     * I have tested this by being defeated by the intruder and getting game over.
+
+### Escape Pod 
+
+* Is the user able to escpae and complete the game after collecting all items?
+    * Yes, the user is able to complete the game.
+    * I have tested this by collectig all items and going to the escape pod. 
+
+* Does the correct message show depending on the items in the users backpack?
+    * The user is able to see the correct screen dependent on items in the backpack.
+    * I have tested this by having the correct items in the backpack and seeing the complete game screen.
+    * I have tested this by having the incorrect items in the backpack and the game tell me to find the code.
+
 
 
 
