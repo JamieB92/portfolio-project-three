@@ -289,4 +289,3 @@ while True:
         clear()
         current_deck = "Cryo"
         computer = ' '
-        

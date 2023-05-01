@@ -8,7 +8,7 @@ Click <a href="https://escape-from-the-iss-ravana.herokuapp.com/" target=" _blan
 
 
 # User Experience
-## Home Page
+## Home Screen
 When the user first comes to the game they will be presented with a welcome screen.<br>
 The welcome screen gives the user a brief introduction on the game and how the user is able to complete the game.<br>
 Within the welcome screen the user is given instructions on how to play the game by providing a list of the commands they can use in game.<br>
@@ -107,7 +107,77 @@ When the user arrives at the escape pod and has all the correct items they will 
 If the user hasnt got enough items they will be presented with this message: 
 <img src="./images/escape-no.png">
 
-### User Experience Feed Back
+# User Experience Feedback
 
 ## Shannon White - 30/04/2023
 The overall game experience was very positive. The game provides plenty of challenges to overcome while you work your way around the ship. The game has an extra dimension of having to remember the route you take, so it is highly recommended that you make a note of the places you've been so you can create the map as you play the game. The game is logical and easy to follow, and with the added objective of defeating the boss to obtain the pin before being able to escape the ship, it is complex yet enjoyable.
+
+# Testing
+
+## CI Python Linter
+
+I have tested my code through the CI Python Linter provided:
+<img src="./images/ci_pylinter_pass.png">
+
+## Home Screen 
+
+* Is the user able to access the Intro Story by only hitting enter? 
+    * Yes, I have tested this by hitting enter which takes the user to the Intro Story.
+    * I have been able to test this by pressing other keys which doesnt take the user to the next screen.
+
+* Once Enter has been hit does the user see the correct screen load? 
+    * Yes, it loads the correct screen for the user.
+
+*  Are the instructions & controls easy to read and take in for the user? 
+    *  Yes, the intructions & controls are easy to read and understand.
+
+## Intro Story
+
+* Is the user able to access the AI Introduction by only hitting enter? 
+    * Yes, I have tested this by hitting enter which takes the user to the AI Introduction.
+    * I have been able to test this by pressing other keys which doesnt take the user to the next screen.
+
+* Once Enter has been hit does the user see the correct screen load? 
+    * Yes, it loads the correct screen for the user.
+
+## AI Introduction
+
+* Is the user able to access the Game Screen once a name has been entered? 
+    * Yes, I have tested this by entering a name and then hitting enter which takes the user to the Game Screen.
+
+* Is the user able to enter the game screen with out entering a name? 
+    * Yes, The user is able to do this.
+    * I have tested this by hitting enter before entering a name.
+
+* Once Enter has been hit does the user see the correct screen load? 
+    * Yes, it loads the correct screen for the user.
+
+* Is the user able to create a username style name e.g with numbers and symbols?
+    * Yes, I have been able to test this by adding numbers and symbols to the name and hitting enter.
+
+## Game Screen 
+
+### Movement
+
+* Is the user able to move between rooms? 
+    * Yes, the user is able to move between rooms.
+    * I have tested this by entering go and the direction of choice
+
+* Does the hud tell the user which room they are in? 
+    * Yes, the user is able to see which room they are in.
+    * I have tested this by changing rooms which changes the room in the hud
+
+* Is the user able to use an incorrect movement? 
+    * No, they are unable to and causes no effect to the game. 
+    * I have tested this by entering incorrect commands 
+
+* If the user cant move that way does the game tell them ?
+    * Yes, the user is informed that they cant go that way 
+    * I have tested this by entering a direction that leads to a wall
+
+
+
+
+
+
+
