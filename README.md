@@ -127,7 +127,7 @@ The overall game experience was very positive. The game provides plenty of chall
 
 ## CI Python Linter
 
-I have tested my code through the CI Python Linter provided:
+I have tested my code through the CI Python Linter provided which passed with no errors found.
 <img src="./images/ci_pylinter_pass.png">
 
 ## Home Screen 
@@ -172,19 +172,19 @@ I have tested my code through the CI Python Linter provided:
 
 * Is the user able to move between rooms? 
     * Yes, the user is able to move between rooms.
-    * I have tested this by entering go and the direction of choice
+    * I have tested this by entering go and the direction of choice.
 
 * Does the hud tell the user which room they are in? 
     * Yes, the user is able to see which room they are in.
-    * I have tested this by changing rooms which changes the room in the hud
+    * I have tested this by changing rooms which changes the room in the hud.
 
 * Is the user able to use an incorrect movement? 
     * No, they are unable to and causes no effect to the game. 
-    * I have tested this by entering incorrect commands 
+    * I have tested this by entering incorrect commands.
 
 * If the user cant move that way does the game tell them ?
-    * Yes, the user is informed that they cant go that way 
-    * I have tested this by entering a direction that leads to a wall
+    * Yes, the user is informed that they cant go that way. 
+    * I have tested this by entering a direction that leads to a wall.
 
 * If the user defeats an intruder are they able to move about the ship?
     * Yes, the user is able to move out of that room.
@@ -203,14 +203,14 @@ I have tested my code through the CI Python Linter provided:
 
 * Is the user able to pick up an incorrect item? 
     * No, they are unable to pick up an incorrect item. 
-    * I have tested this by entering incorrect items and the hud telling me that the item doesnt exisist
+    * I have tested this by entering incorrect items and the hud telling me that the item doesnt exisist.
 
 * Does the item get added to the backpack once picked up?
-    * Yes, the user is able to see the item gets added to the backpack 
-    * I have tested this by entering get (item_name) and seeing it get added to backpack
+    * Yes, the user is able to see the item gets added to the backpack. 
+    * I have tested this by entering get (item_name) and seeing it get added to backpack.
 
 * Does the backpack show in the intruder screens? 
-    * Yes the user is still able to see the backpack in the intruder screen.
+    * Yes, the user is still able to see the backpack in the intruder screen.
     * I have tested this by entering the intruder scene.
 
 * Is the user able to pick up an item after defeating an intruder?
@@ -220,19 +220,19 @@ I have tested my code through the CI Python Linter provided:
 ### Restart
 
 * Is the user able to enter restart and the game restarts ? 
-    * Yes, the user is able restart the game 
+    * Yes, the user is able restart the game. 
     * I have tested this by entering restart and seeing the game restart.
 
 * Does the resart function keep the username?
-    * Yes the user is able to keep their name after restart has been called.
+    * Yes, the user is able to keep their name after restart has been called.
     * I have tested this by enter restart and see the name entered still in the hud.
 
 * Does the Position of the player reset ? 
-    * Yes the players position resets.
-    * I have tested this by restarting the game and starting back at the Cryo deck
+    * Yes, the players position resets.
+    * I have tested this by restarting the game and starting back at the Cryo deck.
 
 * Does the contents of the backpack reset? 
-    * Yes the user starts with an empty backpack when the function is called.
+    * Yes, the user starts with an empty backpack when the function is called.
     * I have tested this by having items in the back pack, entering restart and getting back to the hud with no items.
 
 * Does the console clear after restart has been entered ? 
@@ -256,15 +256,15 @@ I have tested my code through the CI Python Linter provided:
     * I have tested this byu entering help.
 
 * Is the menu clear and easy to read? 
-    * Yes the user is able to read the instructions cleary.
+    * Yes, the user is able to read the instructions cleary.
     * I have tested this by entering help.
 
 * Is the hud visable at the below the menu? 
-    * Yes the user is able to see this.
+    * Yes, the user is able to see this.
     * I have tested this by entering help. 
 
 * Does the help menu clear after entering next move ? 
-    * Yes the menu clears after an input is entered.
+    * Yes, the menu clears after an input is entered.
     * I have tested this by entering a movement and seeing the menu clear.
 
 
@@ -279,8 +279,8 @@ I have tested my code through the CI Python Linter provided:
     * The users game ends when they are defeated and are unable to carry on.
     * I have tested this by being defeated by the intruder and getting game over.
 
-* Do the hints show the correct number of items needed to defeat the intruders on game over.
-    * Yes the users is presented with the correct number. 
+* Does the hint show the correct number of items needed to defeat the intruders on game over.
+    * Yes, the users is presented with the correct number. 
     * I have tested this by being defeated by the intruder and getting game over.
 
 ### Escape Pod 
