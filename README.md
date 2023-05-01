@@ -107,6 +107,15 @@ When the user arrives at the escape pod and has all the correct items they will 
 If the user hasnt got enough items they will be presented with this message: 
 <img src="./images/escape-no.png">
 
+# Flow Charts
+
+## Map:
+<img src="./images/alien_game_flow (5).png">
+
+## Game function:
+<img src="./images/flow_chart.png">
+
+
 # User Experience Feedback
 
 ## Shannon White - 30/04/2023
