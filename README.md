@@ -283,9 +283,9 @@ I have tested my code through the CI Python Linter provided:
 
 ### Escape Pod 
 
-* Is the user able to escpae and complete the game after collecting all items?
+* Is the user able to escape and complete the game after collecting all items?
     * Yes, the user is able to complete the game.
-    * I have tested this by collectig all items and going to the escape pod. 
+    * I have tested this by collecting all items and going to the escape pod. 
 
 * Does the correct message show depending on the items in the users backpack?
     * The user is able to see the correct screen dependent on items in the backpack.
@@ -295,3 +295,26 @@ I have tested my code through the CI Python Linter provided:
 * Is the user able to move out of the escape pod when they have the incorrect number of items ? 
     * Yes, the user is able to move out of the escape pod and carry the game on.
     * I have tested this by entering the escape pod with the incorrcect number and was able to move out of the area.
+
+# Deployment 
+
+ * Escape from the ISS Ravana was deployed using Heroku:
+ * Create a new app.
+ * Go to settings.
+ * Create config var add PORT to key and Value 8000 
+ * Add buildpack - Python - nodeJS.
+ * Go to deploy and connect github.
+ * Search github repository - connect. 
+ * Setup automatic deploy.
+ 
+ The live link to Escape from the ISS Ravana can be found at:<br>
+ https://escape-from-the-iss-ravana.herokuapp.com/ 
+ 
+
+ # Technologies Used 
+
+* <a href="https://www.python.org/" target=" _blank">Python</a>
+* <a href="https://www.gitpod.io/" target=" _blank">Gitpod</a>
+* <a href="https://github.com/" target=" _blank">GitHub</a>
+* <a href="https://git-scm.com/" target=" _blank">Git</a>
+* <a href="https://www.heroku.com/" target=" _blank">Heroku</a>
