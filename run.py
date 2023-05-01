@@ -137,7 +137,7 @@ while True:
             print("                 and splits you in half\n               ")
             print("                     GAME OVER !!!                    \n")
             print("               -        Hint       -                    ")
-            print("             You need to collect 6 items                ")
+            print("             You need to collect 7 items                ")
             print("               To defeat the creature                 \n")
             break
 

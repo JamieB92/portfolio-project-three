@@ -175,6 +175,10 @@ I have tested my code through the CI Python Linter provided:
     * Yes, the user is informed that they cant go that way 
     * I have tested this by entering a direction that leads to a wall
 
+* If the user defeats an intruder are they able to move about the ship?
+    * Yes, the user is able to move out of that room.
+    * I have tested this by defeating an intruder and moving out of the room.
+
 
 ### Pick up item
 
@@ -199,9 +203,74 @@ I have tested my code through the CI Python Linter provided:
     * I have tested this by entering the intruder scene.
 
 * Is the user able to pick up an item after defeating an intruder?
-    Yes, the user is able to enter get (item_name) which appends the item to the backpack
+    Yes, the user is able to enter get (item_name) which appends the item to the backpack.
 
 
+### Restart
+
+* Is the user able to enter restart and the game restarts ? 
+    * Yes, the user is able restart the game 
+    * I have tested this by entering restart and seeing the game restart.
+
+* Does the resart function keep the username?
+    * Yes the user is able to keep their name after restart has been called.
+    * I have tested this by enter restart and see the name entered still in the hud.
+
+* Does the Position of the player reset ? 
+    * Yes the players position resets.
+    * I have tested this by restarting the game and starting back at the Cryo deck
+
+* Does the contents of the backpack reset? 
+    * Yes the user starts with an empty backpack when the function is called.
+    * I have tested this by having items in the back pack, entering restart and getting back to the hud with no items.
+
+* Does the console clear after restart has been entered ? 
+    * Yes the user sees the intro screen again, once the user is in the game there is no previous commands left.
+    * I have tested this by restarting the game after playing.
+
+### Exit
+
+* Is the user able to stop the game after entering the exit command?
+    * Yes, the user is able to stop the game.
+    * I have tested this by entering exit.
+
+* Does the exit message show ? 
+    * Yes, the user is able to see the exit message on exit.
+    * I have tested this by entering exit.
+
+### Help
+
+* Is the user able to see the instructions when help is entered? 
+    * Yes, the user is able to the help menu.
+    * I have tested this byu entering help.
+
+* Is the menu clear and easy to read? 
+    * Yes the user is able to read the instructions cleary.
+    * I have tested this by entering help.
+
+* Is the hud visable at the below the menu? 
+    * Yes the user is able to see this.
+    * I have tested this by entering help. 
+
+* Does the help menu clear after entering next move ? 
+    * Yes the menu clears after an input is entered.
+    * I have tested this by entering a movement and seeing the menu clear.
+
+
+### Intruder Interaction
+
+* Does the correct message show depending on the items on the users backpack items?
+    * The user is able to see the correct screen dependent on items in backpack.
+    * I have tested this by having the correct items in the backpack and seeing defeat the intruder screen.
+    * I have tested this by having the incorrect items in the backpack and seeing the game over screen. 
+
+* Does the game end when you are defeated by an intruder. 
+    * The users game ends when they are defeated and are unable to carry on.
+    * I have tested this by being defeated by the intruder and getting game over.
+
+* Do the hints show the correct number of items needed to defeat the intruders on game over.
+    * Yes the users is presented with the correct number. 
+    * I have tested this by being defeated by the intruder and getting game over.
 
 
 
