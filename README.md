@@ -155,7 +155,7 @@ I have tested my code through the CI Python Linter provided:
 * Is the user able to create a username style name e.g with numbers and symbols?
     * Yes, I have been able to test this by adding numbers and symbols to the name and hitting enter.
 
-## Game Screen 
+## Game 
 
 ### Movement
 
@@ -174,6 +174,34 @@ I have tested my code through the CI Python Linter provided:
 * If the user cant move that way does the game tell them ?
     * Yes, the user is informed that they cant go that way 
     * I have tested this by entering a direction that leads to a wall
+
+
+### Pick up item
+
+* Is the user able to pick up items? 
+    * Yes, the user is able to pick up items.
+    * I have tested this by entering get (item_name) 
+
+* Does the hud tell the user when they have picked up the item? 
+    * Yes, the user is able to see which item they have picked up.
+    * I have tested this by picking up the item and the hud telling me ive picked item up.
+
+* Is the user able to pick up an incorrect item? 
+    * No, they are unable to pick up an incorrect item. 
+    * I have tested this by entering incorrect items and the hud telling me that the item doesnt exisist
+
+* Does the item get added to the backpack once picked up?
+    * Yes, the user is able to see the item gets added to the backpack 
+    * I have tested this by entering get (item_name) and seeing it get added to backpack
+
+* Does the backpack show in the intruder screens? 
+    * Yes the user is still able to see the backpack in the intruder screen.
+    * I have tested this by entering the intruder scene.
+
+* Is the user able to pick up an item after defeating an intruder?
+    Yes, the user is able to enter get (item_name) which appends the item to the backpack
+
+
 
 
 
