@@ -2,7 +2,7 @@
 Escape from the ISS Ravana is a terminal text-based horror survival game where you wake up from an intergalactic slumber to find your crew mates all dead around you.<br> 
 The aim of the game is to explore the ship to discover what has killed your crew. Along the way, the player will need collect items to be able to escape and defeat the mysterious intruder.<br>
 The game has been built to test the players short term memory whilst telling a story along the way.<br>
-Click <a href="https://escape-from-the-iss-ravana.herokuapp.com/" target="_blank">here</a> to play the game. 
+Click <a href="https://iss-ravana-python.onrender.com/" target="_blank">here</a> to play the game. 
 
 <img src="./images/intro.png">
 
@@ -300,17 +300,24 @@ I have tested my code through the CI Python Linter provided which passed with no
 
 # Deployment 
 
- * Escape from the ISS Ravana was deployed using Heroku:
- * Create a new app.
- * Go to settings.
- * Create config var add PORT to key and Value 8000 
- * Add buildpack - Python - nodeJS.
- * Go to deploy and connect github.
- * Search github repository - connect. 
- * Setup automatic deploy.
- 
- The live link to Escape from the ISS Ravana can be found at:<br>
- https://escape-from-the-iss-ravana.herokuapp.com/ 
+Escape from the ISS Ravana was originally deployed on Heroku using its Python + Node.js buildpacks. Heroku discontinued its free tier, so it has since been re-deployed on Render, on its free tier.
+
+This project needs no database or other external services — it's a Python script run inside a browser-based terminal (via a small Node.js/`node-pty` wrapper), so deployment only needs the following:
+
+* Navigate to https://render.com/ and sign up/log in.
+* Click "New +" then "Web Service".
+* Connect your GitHub account and select this repository.
+* Set the following:
+    * Language: Node
+    * Build Command: `npm install`
+    * Start Command: `node index.js`
+* No environment variables are required — `index.js` already reads the port to bind to from Render's `$PORT` environment variable directly.
+* Click "Create Web Service". Render will build and deploy automatically from the connected branch on every push.
+
+**Note:** `node-pty` (the package that spawns the Python terminal) compiles a native addon during `npm install`, which needs Python and build tools available in the build image — this worked without any extra configuration on Render's Node build environment, same as it did on Heroku's.
+
+The live link to Escape from the ISS Ravana can be found at:<br>
+https://iss-ravana-python.onrender.com/ 
  
 
  # Technologies Used 
@@ -319,7 +326,7 @@ I have tested my code through the CI Python Linter provided which passed with no
 * <a href="https://www.gitpod.io/" target="_blank">Gitpod</a>
 * <a href="https://github.com/" target="_blank">GitHub</a>
 * <a href="https://git-scm.com/" target="_blank">Git</a>
-* <a href="https://www.heroku.com/" target="_blank">Heroku</a>
+* <a href="https://render.com/" target="_blank">Render</a>
 
 # Credits
 
